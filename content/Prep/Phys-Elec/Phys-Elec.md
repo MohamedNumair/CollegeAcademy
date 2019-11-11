@@ -14,9 +14,6 @@ draft: false
 |---:|----------------------|
 | || 
 
-{{%attachments title="Related files" pattern=".*(pdf|mp4)"/%}}
-
-
 
 ## Sections
 
@@ -28,7 +25,7 @@ draft: false
 
 |  | |
 |---:|----------------------|
-| {{% button href="content\Prep\Phys-Elec\markdown-cheatsheet-online.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
+| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/حل%20شييت%20كولوم.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
 
 
 ## Centres Papers 
