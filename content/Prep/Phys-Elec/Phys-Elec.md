@@ -28,7 +28,7 @@ draft: false
 
 |  | |
 |---:|----------------------|
-| {{% button href="https://drive.google.com/open?id=1kqQ-RBjf8lwiTVj9zz2ighs6pjqXTOtH" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
+| {{% button href="content\Prep\Phys-Elec\markdown-cheatsheet-online.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
 
 
 ## Centres Papers 
