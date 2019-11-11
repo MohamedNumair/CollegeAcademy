@@ -28,7 +28,7 @@ draft: false
 
 |  | |
 |---:|----------------------|
-| {{% button href="\Prep\Physics-Electrical\حل شييت كولوم.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
+| {{% button href="\حل شييت كولوم.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
 
 
 ## Centres Papers 
