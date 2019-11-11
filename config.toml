@@ -1,0 +1,15 @@
+baseURL = "http://CollegeTanta.cf/"
+languageCode = "en-us"
+title = "COLLEGE"
+theme ="hugo-theme-learn"
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+
+themeVariant = "red"
+
+# When using mulitlingual website, disable the switch language button.
+disableLanguageSwitchingButton = true
+
+defaultContentLanguage = "ar"
