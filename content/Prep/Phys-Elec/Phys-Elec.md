@@ -25,11 +25,23 @@ draft: false
 
 |  | |
 |---:|----------------------|
+
 | {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/حل%20شييت%20كولوم.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
+
 
 
 ## Centres Papers 
 
 |  | |
+
 |---:|----------------------|
-| || 
+
+| {{% button href="Prep/Phys-Elec/Phys-Elec.files/شير - خالد - كهربية - قانون كولوم.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
+
+| {{% button href="Prep/Phys-Elec/Phys-Elec.files/شير - خالد-كهربية - المجال الكهربي.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المجال الكهربي - سنتر شير - م خالد    |
+
+
+| {{% button href="Prep/Phys-Elec/Phys-Elec.files/شير- خالد - كهربية -  جاوس.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - سنتر شير - م خالد    |
+
+
+

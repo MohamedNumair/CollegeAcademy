@@ -33,4 +33,5 @@ draft: false
 
 |  | |
 |---:|----------------------|
-| || 
+| {{% button href="Prep/Phys-Elec/Phys-Elec.files/شير -خالد - خواص - الوحدات والابعاد.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الوحدات والابعاد - سنتر شير - م خالد    |
+
