@@ -23,10 +23,10 @@ draft: false
 
 ## Sheets with Solutions
 
+
 |  | |
 |---:|----------------------|
-| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/Columbs-Sheet.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
-
+| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/Columbs-Sheet.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
 
 
 ## Centres Papers 
