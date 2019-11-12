@@ -26,7 +26,7 @@ draft: false
 |  | |
 |---:|----------------------|
 
-| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/حل%20شييت%20كولوم.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
+| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/Columbs-Sheet.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت كولوم    |
 
 
 
@@ -36,12 +36,12 @@ draft: false
 
 |---:|----------------------|
 
-| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/شير - خالد - كهربية - قانون كولوم.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
+| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/Coloumbs-Law-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
 
-| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/شير - خالد-كهربية - المجال الكهربي.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المجال الكهربي - سنتر شير - م خالد    |
+| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/ElectricField-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المجال الكهربي - سنتر شير - م خالد    |
 
 
-| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/شير- خالد - كهربية -  جاوس.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - سنتر شير - م خالد    |
+| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/Gauss-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - سنتر شير - م خالد    |
 
 
 
