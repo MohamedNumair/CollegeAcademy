@@ -9,9 +9,13 @@ draft: false
 
 
 
-|  | |
-|---:|----------------------|
-| || 
+**link**|**Description**
+:-----:|:-----:
+ {{% button href="https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |قانون كولوم - محاضرة - م/ أدهم أسامة|
+ {{% button href="https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |قانون كولوم - محاضرة - م/ أدهم أسامة|
+ {{% button href="https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |قانون كولوم - محاضرة - م/ أدهم أسامة|
+ {{% button href="https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |قانون كولوم - محاضرة - م/ أدهم أسامة|
+ {{% button href="https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |قانون كولوم - محاضرة - م/ أدهم أسامة|
 
 
 ## Sections
