@@ -29,4 +29,8 @@ weight : 4
 
 |  | |
 |---:|----------------------|
+| {{% button href="/Prep/files/Algebra-Share-Bionomial.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- ذات الحدين - م طاهر|
+| {{% button href="/Prep/files/Algebra-Share-Partial_Fractions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الكسور الجزيئية - م طاهر|
+| {{% button href="/Prep/files/Algebra-Share-Mathemtaical-Induction.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الاستنتاج الرياضي - م طاهر|
+| {{% button href="/Prep/files/Algebra-Share-Equations-Theorem.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- نظرية المعادلات - م طاهر|
 

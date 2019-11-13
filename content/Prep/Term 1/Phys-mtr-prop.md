@@ -34,5 +34,5 @@ weight : 3
 
 |  | |
 |---:|----------------------|
-| {{% button href="https://www.collegetanta.cf/Prep/files/DimnUnits-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الوحدات والابعاد - سنتر شير - م خالد    |
+| {{% button href="/Prep/files/DimnUnits-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الوحدات والابعاد - سنتر شير - م خالد    |
 
