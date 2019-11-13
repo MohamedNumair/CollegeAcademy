@@ -12,6 +12,14 @@ draft: false
 |---:|----------------------|
 | || 
 
+| link                                                                                       | Description |
+|--------------------------------------------------------------------------------------------|-------------|
+| [Download](/Prep/files/Coloumb-Lec-Adham.pdf) | Law 2 columbs |
+| [Download](https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf) | Law columbs |
+| [Download](https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf) | Law columbs |
+| [Download](https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf) | Law columbs |
+| [Download](https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf) | Law columbs |
+
 
 ## Sections
 
