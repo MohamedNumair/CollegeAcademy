@@ -33,5 +33,5 @@ draft: false
 
 |  | |
 |---:|----------------------|
-| {{% button href="https://www.collegetanta.cf/Prep/Phys-Elec/Phys-Elec.files/DimnUnits-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الوحدات والابعاد - سنتر شير - م خالد    |
+| {{% button href="https://www.collegetanta.cf/Prep/files/DimnUnits-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الوحدات والابعاد - سنتر شير - م خالد    |
 
