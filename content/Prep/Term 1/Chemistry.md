@@ -34,5 +34,7 @@ weight : 1
 
 |  | |
 |---:|----------------------|
-| {{% button href="https://www.collegetanta.cf/Prep/files/DimnUnits-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الوحدات والابعاد - سنتر شير - م خالد    |
+| {{% button href="/Prep/files/Chemistry-Share-Gases.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الغازات - م داوود|
+| {{% button href="/Prep/files/Chemistry-Share-Entropy.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الانتروبي - م داوود|
+| {{% button href="/Prep/files/Chemistry-Share-Solutions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- المحاليل - م داوود|
 
