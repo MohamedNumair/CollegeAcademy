@@ -17,7 +17,7 @@ weight : 6
 
 |  | |
 |---:|----------------------|
-| {{% button href="\Prep\Files\Computer-Section-Ch3-network.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الكمبيوتر - شابتر 3: شبكات الكمبيوتر |
+| {{% button href="/Prep/Files/Computer-Section-Ch3-network.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الكمبيوتر - شابتر 3: شبكات الكمبيوتر |
 
 ## Sheets with Solutions
 
