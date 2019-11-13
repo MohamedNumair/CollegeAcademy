@@ -1,1 +1,0 @@
-![Hits](https://www.collegetanta.cf)

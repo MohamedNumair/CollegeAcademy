@@ -1,7 +1,7 @@
 ---
 title: "Physics : Electrical"
 date: 2019-11-11T01:57:18+02:00
-weight : 1
+weight : 2
 draft: false
 ---
 
