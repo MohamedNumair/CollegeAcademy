@@ -14,9 +14,8 @@ draft: false
 |---:|----------------------|
 | {{% button href="https://www.collegetanta.cf/Prep/files/Coloumb-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - محاضرة - م/ أدهم أسامة   |
 | {{% button href="https://www.collegetanta.cf/Prep/files/Gauss-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - محاضرة - م/ أدهم أسامة  |
-| [Download](http://facebook.com/CollegeTanta)  |  جاوس - محاضرة - م/ أدهم أسامة  |
-
- [جاوس - محضارة - أدهم أسامة](http://facebook.com/CollegeTanta)
+| [Download](https://www.collegetanta.cf/Prep/files/Gauss-Lec-Adham.pdf
+ [جاوس - محضارة - أدهم أسامة](https://www.collegetanta.cf/Prep/files/Gauss-Lec-Adham.pdf)
 ***
 
 
