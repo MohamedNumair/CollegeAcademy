@@ -11,7 +11,10 @@ weight : 4
 
 |  | |
 |---:|----------------------|
-| || 
+| {{% button href="/Prep/files/Algebra-Lec-PartialFractions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | محاضرة - الكسور الجزئية - م أدهم أسامة|
+| {{% button href="/Prep/files/Algebra-Lec-MathematicalInduction.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | محاضرة - الاستنتاج الرياضي - م أدهم|
+| {{% button href="/Prep/files/Algebra-Lec-BionomiaTHeory.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  محاضرة- نظرية ذات الحدين - م أدهم|
+| {{% button href="/Prep/files/Algebra-Lec-NumericalSolutionForLinearEquations.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  محاضرة- الحل الرقمي للمعادلات غير الخطية - م أدهم|
 
 ## Sections
 
