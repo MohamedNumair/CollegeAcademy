@@ -32,4 +32,6 @@ weight : 5
 |---:|----------------------|
 | {{% button href="/Prep/files/Diff-Share-Functions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الدوال - م طاهر|
 | {{% button href="/Prep/files/Diff-Share-Limits.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- النهايات - م طاهر|
+| {{% button href="/Prep/files/Diff-Share-Derivatives.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الاشتقاق - م طاهر|
+
 
