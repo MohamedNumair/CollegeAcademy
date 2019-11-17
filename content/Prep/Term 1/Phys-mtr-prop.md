@@ -12,8 +12,7 @@ weight : 3
 
 |  | |
 |---:|----------------------|
-| || 
-
+| {{% button href="/Prep/files/Mtr-Gravity-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | محاضرة - الجاذبية - م أدهم
 
 
 
@@ -22,7 +21,7 @@ weight : 3
 
 |  | |
 |---:|----------------------|
-| || 
+| {{% button href="/Prep/files/Mtr-StaticFluids-Section-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سكشن - الموائع الساكنة - م أدهم   |
 
 ## Sheets with Solutions
 
