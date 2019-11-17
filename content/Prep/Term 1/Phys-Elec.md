@@ -14,7 +14,7 @@ draft: false
 |---:|----------------------|
 | {{% button href="/Prep/files/Coloumb-Lec-Adham.pdf"
  icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - محاضرة - م/ أدهم أسامة   |
-| {{% button href="/Prep/files/Gauss-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - محاضرة - م/ أدهم أسامة  |
+| {{% button href="/Prep/files/Elec-Gauss-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - محاضرة - م/ أدهم أسامة  |
 
 
 
@@ -30,16 +30,16 @@ draft: false
 
 |  | |
 |---:|----------------------|
-| {{% button href="https://www.collegetanta.cf/Prep/files/Columbs-Sheet.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
+| {{% button href="/Prep/files/Elec-Columbs-Sheet.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
 
 
 ## Centres Papers 
 
 |  | |
 |---:|----------------------|
-| {{% button href="https://www.collegetanta.cf/Prep/files/Coloumbs-Law-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
-| {{% button href="https://www.collegetanta.cf/Prep/files/ElectricField-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المجال الكهربي - سنتر شير - م خالد    |
-| {{% button href="https://www.collegetanta.cf/Prep/files/Gauss-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - سنتر شير - م خالد    |
+| {{% button href="/Prep/files/Elec-Coloumbs-Law-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
+| {{% button href="/Prep/files/Elec-ElectricField-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المجال الكهربي - سنتر شير - م خالد    |
+| {{% button href="/Prep/files/Elec-Gauss-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - سنتر شير - م خالد    |
 
 
 
