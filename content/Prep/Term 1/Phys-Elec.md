@@ -12,7 +12,7 @@ draft: false
 
 |  | |
 |---:|----------------------|
-| {{% button href="/Prep/files/Coloumb-Lec-Adham.pdf"
+| {{% button href="/Prep/files/Elec-Coloumb-Lec-Adham.pdf"
  icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - محاضرة - م/ أدهم أسامة   |
 | {{% button href="/Prep/files/Elec-Gauss-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - محاضرة - م/ أدهم أسامة  |
 
