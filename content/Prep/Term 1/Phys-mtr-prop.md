@@ -34,4 +34,12 @@ weight : 3
 |  | |
 |---:|----------------------|
 | {{% button href="/Prep/files/Mtr-DimnUnits-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الوحدات والابعاد - سنتر شير - م خالد    |
+| {{% button href="/Prep/files/Mtr-Future-Simple_Harmonic_Motion.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الحركة التوافقية البسيطة - سنتر فيوتشر - م عاصم    |
+| {{% button href="/Prep/files/Mtr-Future-StaticFluids.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | استاتيكا الموائع - سنتر فيوتشر - م عاصم    |
 
+## Revisions & Exams
+
+|  | |
+|---:|----------------------|
+| {{% button href="/Prep/files/Mtr-Revisions-Proofs.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | مراجعة - اثباتات د بهاء    |
+| {{% button href="/Prep/files/Mtr-Revisions-SHMProofs.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | مراجعة - اثباتات الحركة التوافقية البسيطة    |
