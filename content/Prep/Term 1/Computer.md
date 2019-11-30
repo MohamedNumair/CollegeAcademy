@@ -22,9 +22,6 @@ weight : 6
 | {{% button href="/Prep/Files/Computer-Sections-Ch3Networks.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سكشن الكمبيوتر - شابتر 3: شبكات الكمبيوتر |
 
 
-| A| A|
-|----|-------|
-| a| a|
 
 ## Sheets with Solutions
 
