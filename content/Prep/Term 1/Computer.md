@@ -23,7 +23,7 @@ weight : 6
 
 
 | A| A|
-|--|--|
+|----|-------|
 | a| a|
 
 ## Sheets with Solutions
