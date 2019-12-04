@@ -11,7 +11,7 @@ weight : 6
 
 |  | |
 |---:|----------------------|
-| || 
+| {{% button href="/Prep/Files/Computer-Lec-Lec9DatabaseandDecisionMakingPart1&2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | محاضرة - قواعد البيانات واتخاذالقرار الجزئين 1 و 2 |
 
 ## Sections
 
