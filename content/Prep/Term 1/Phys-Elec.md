@@ -39,12 +39,9 @@ draft: false
 
 |  | |
 |---:|----------------------|
-| {{% button href="/Prep/files/Elec-Coloumbs-Law-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر شير - م خالد    |
 | {{% button href="/Prep/files/Elec-Future-Columbs_Law.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | قانون كولوم - سنتر فيوتشر - م عاصم    |
-| {{% button href="/Prep/files/Elec-ElectricField-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المجال الكهربي - سنتر شير - م خالد    |
 | {{% button href="/Prep/files/Elec-Future-Fields.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المجال الكهربي - سنتر فيوتشر - م عاصم    |
 | {{% button href="/Prep/files/Elec-Future-Fields_3.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | 3  المجال الكهربي - سنتر فيوتشر - م عاصم    |
-| {{% button href="/Prep/files/Elec-Gauss-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - سنتر شير - م خالد    |
 | {{% button href="/Prep/files/Elec-Future-Gauss.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  جاوس - سنتر فيوتشر - م عاصم  |
 
 ## Revisions & Exams
