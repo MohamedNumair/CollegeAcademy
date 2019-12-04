@@ -29,7 +29,6 @@ weight : 7
 
 |  | |
 |---:|----------------------|
-| {{% button href="/Prep/files/Statics-Share-Vectors.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المتجهات - سنتر شير  |
 | {{% button href="/Prep/files/Statics-Future-Vectors.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المتجهات - سنتر فيوتشر - م الشافعي  |
 | {{% button href="/Prep/files/Statics-Future-VectorsCalculus.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  تفاضل المتجهات - سنتر فيوتشر - م الشافعي  |
 | {{% button href="/Prep/files/Statics-Future-ObjectsStatics.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |   استاتيكا المواد 1 - سنتر فيوتشر - م الشافعي  |
