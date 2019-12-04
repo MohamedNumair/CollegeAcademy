@@ -33,9 +33,6 @@ weight : 6
 
 |  | |
 |---:|----------------------|
-| {{% button href="/Prep/files/Computer-Share-Ch1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الكمبيوتر - شابتر 1: تاريخ الكمبيوتر|
-| {{% button href="/Prep/files/Computer-Share-Ch2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الكمبيوتر - شابتر 2: أنظمة التشغيل|
 | {{% button href="/Prep/files/Computer-Future-Ch2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الكمبيوتر - شابتر 2: أنظمة التشغيل|
-| {{% button href="/Prep/files/Computer-Share-Ch3.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الكمبيوتر - شابتر 3: شبكات الكمبيوتر |
 | {{% button href="/Prep/files/Computer-SMEC-ExRev2018.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سميك - الكمبيوتر - مراجعه ليله امتحان 2018 |
 
