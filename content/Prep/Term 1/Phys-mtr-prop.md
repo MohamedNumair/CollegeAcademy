@@ -27,7 +27,7 @@ weight : 3
 
   | |
 |---:|----------------------|
-| || 
+| {{% button href="/Prep/files/Mtr-Sheets-GravityReport.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |حل ريبورت الجاذبية م.إسراء شوقي |
 
 ## Centres Papers 
 
