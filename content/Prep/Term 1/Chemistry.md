@@ -31,6 +31,11 @@ weight : 1
 | {{% button href="/Prep/files/Chem-Sheet-Gases.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت - الغازات - م بسمة|
 | {{% button href="/Prep/files/Chem-Sheets-Thermo_Answer.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل شييت - الثرمودينامك|
 
+## Recap
+
+  | |
+|---:|----------------------|
+| {{% button href="/Prep/files/Chem-Thermo-Definitions-IsraaShawky.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | جميع تعريفات الثيرمو دينامك - م.إسراء شوقي|
 
 ## Centres Papers 
 
