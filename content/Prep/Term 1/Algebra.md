@@ -40,3 +40,11 @@ weight : 4
 | {{% button href="/Prep/files/Algebra-Future-Mathematical_Induction.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الاستنتاج الرياضي - م الشافعي|
 | {{% button href="/Prep/files/Algebra-Future-Mathematical_Induction_2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الاستنتاج الرياضي  2 - م الشافعي|
 
+## Videos 
+
+
+|  | |
+|---:|----------------------|
+| {{% button href="https://youtu.be/KePUbao15TE" icon="fas fa-desktop" %}}COLLEGE WATCH{{% /button %}} | حل مسائل امتحانات - جزء 1|
+| {{% button href="https://youtu.be/sk9mXHisgh4" icon="fas fa-desktop" %}}COLLEGE WATCH{{% /button %}} | حل مسائل امتحانات - جزء 2|
+| {{% button href="https://youtu.be/IzA3is_1ALE" icon="fas fa-desktop" %}}COLLEGE WATCH{{% /button %}} | حل مسائل امتحانات - جزء 3|
