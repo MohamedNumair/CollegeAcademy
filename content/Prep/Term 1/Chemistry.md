@@ -41,6 +41,8 @@ weight : 1
 
 |  | |
 |---:|----------------------|
+| {{% button href="/Prep/files/Chem-Future-WaterTreatment-Prof.Basma-min.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- معالجة المياه - م بسمة|
+| {{% button href="/Prep/files/Chem-Future-Corrosion-Prof.Basma.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- التآكل - م بسمة|
 | {{% button href="/Prep/files/Chem-Future-Gases.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الغازات - م بسمة|
 | {{% button href="/Prep/files/Chem-Future-Thermo_1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الثرمو دينامك 1 - م بسمة|
 | {{% button href="/Prep/files/Chem-Future-Thermo_2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الثرمو دينامك 2 - م بسمة|
