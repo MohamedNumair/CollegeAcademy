@@ -33,9 +33,12 @@ weight : 1
 
 ## Recap
 
-  | |
+|  | |
 |---:|----------------------|
 | {{% button href="/Prep/files/Chem-Thermo-Definitions-IsraaShawky.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | جميع تعريفات الثيرمو دينامك - م.إسراء شوقي|
+| {{% button href="/Prep/files/Chenistry-Revision-ElectroChemistry.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | ملخص الكيمياء الكهربية - م اسراء بدران|
+
+
 
 ## Centres Papers 
 
