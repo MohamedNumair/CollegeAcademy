@@ -11,7 +11,7 @@ weight : 7
 
 |  | |
 |---:|----------------------|
-| || 
+| {{% button href="/Prep/files/Statics-Future-Prima.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |    البريمة -  محاضرة - م ادهم  |
 
 ## Sections
 
@@ -29,4 +29,9 @@ weight : 7
 
 |  | |
 |---:|----------------------|
-
+| {{% button href="/Prep/files/Statics-Future-Vectors.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  المتجهات - سنتر فيوتشر - م الشافعي  |
+| {{% button href="/Prep/files/Statics-Future-VectorsCalculus.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  تفاضل المتجهات - سنتر فيوتشر - م الشافعي  |
+| {{% button href="/Prep/files/Statics-Future-ObjectsStatics.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |   استاتيكا المواد 1 - سنتر فيوتشر - م الشافعي  |
+| {{% button href="/Prep/files/Statics-Future-ObjectsStatics_2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |   استاتيكا المواد 2 - سنتر فيوتشر - م الشافعي  |
+| {{% button href="/Prep/files/Statics-Future-Prima.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |   البريمة - سنتر فيوتشر - م الشافعي  |
+| {{% button href="/Prep/files/Statics-Future-PrimaProblems.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |   مسائل ع البريمة - سنتر فيوتشر - م الشافعي  |

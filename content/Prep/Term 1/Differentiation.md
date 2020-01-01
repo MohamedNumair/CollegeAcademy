@@ -28,9 +28,16 @@ weight : 5
 
 ## Centres Papers 
 
+
 |  | |
 |---:|----------------------|
-| {{% button href="/Prep/files/Diff-Share-Functions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الدوال - م طاهر|
-| {{% button href="/Prep/files/Diff-Share-Limits.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- النهايات - م طاهر|
-| {{% button href="/Prep/files/Diff-Share-Derivatives.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر شير- الاشتقاق - م طاهر|
+| {{% button href="/Prep/files/L'Hopital-Future-Differentiation-Prof.Shaf'i-min.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- قاعدة لوبيتال - م الشافعي|
+| {{% button href="/Prep/files/TaylorExpansion-Future-Differentiation-Prof.Shaf'i.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- مفكوك تايلور - م الشافعي|
+| {{% button href="/Prep/files/Diff-Future-Functions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الدوال - م الشافعي|
+| {{% button href="/Prep/files/Diff-Future-Hyberbolic_Functions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الدوال الزائدية - م الشافعي|
+| {{% button href="/Prep/files/Diff-Future-Limits.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- النهايات - م الشافعي|
+| {{% button href="/Prep/files/Diff-Future-Derivatives.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الاشتقاق - م الشافعي|
+| {{% button href="/Prep/files/Diff-Future-inverseTrig.Derivatives.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الاشتقاق  الدوال المثلثية العكسية - م الشافعي|
+
+
 

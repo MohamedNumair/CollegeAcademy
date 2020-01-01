@@ -21,9 +21,9 @@ weight : 5
 
 ## Sheets with Solutions
 
-  | |
+|  | |
 |---:|----------------------|
-| || 
+| {{% button href="/1st-Elec/files/Programming-Sheet-OnlineDL7Dec.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}}| حل شييت البرمجه الاونلاين ديدلاين السبت 17ديسمبر| 
 
 ## Centres Papers 
 

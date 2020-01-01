@@ -12,8 +12,7 @@ weight : 3
 
 |  | |
 |---:|----------------------|
-| || 
-
+| {{% button href="/Prep/files/Mtr-Gravity-Lec-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | محاضرة - الجاذبية - م أدهم
 
 
 
@@ -22,17 +21,25 @@ weight : 3
 
 |  | |
 |---:|----------------------|
-| || 
+| {{% button href="/Prep/files/Mtr-StaticFluids-Section-Adham.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سكشن - الموائع الساكنة - م أدهم   |
 
 ## Sheets with Solutions
 
-  | |
+| | |
 |---:|----------------------|
-| || 
+| {{% button href="/Prep/files/Mtr-Sheets-GravityReport.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |حل ريبورت الجاذبية م.إسراء شوقي |
 
 ## Centres Papers 
 
 |  | |
 |---:|----------------------|
-| {{% button href="/Prep/files/DimnUnits-Share-Khaled.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الوحدات والابعاد - سنتر شير - م خالد    |
+| {{% button href="/Prep/files/Viscosity-Future-Physics-Prof.Asem.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | اللزوجة - سنتر فيوتشر - م عاصم    |
+| {{% button href="/Prep/files/Mtr-Future-Simple_Harmonic_Motion.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الحركة التوافقية البسيطة - سنتر فيوتشر - م عاصم    |
+| {{% button href="/Prep/files/Mtr-Future-StaticFluids.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | استاتيكا الموائع - سنتر فيوتشر - م عاصم    |
 
+## Revisions & Exams
+
+|  | |
+|---:|----------------------|
+| {{% button href="/Prep/files/Mtr-Revisions-Proofs.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | مراجعة - اثباتات د بهاء    |
+| {{% button href="/Prep/files/Mtr-Revisions-SHMProofs.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | مراجعة - اثباتات الحركة التوافقية البسيطة    |
