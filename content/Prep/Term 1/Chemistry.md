@@ -38,6 +38,7 @@ weight : 1
 | {{% button href="/Prep/files/Chem-Thermo-Definitions-IsraaShawky.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | جميع تعريفات الثيرمو دينامك - م.إسراء شوقي|
 | {{% button href="/Prep/files/Chenistry-Revision-ElectroChemistry.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | ملخص الكيمياء الكهربية - م اسراء بدران|
 | {{% button href="/Prep/files/Chem-Recap-Cement.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | ملخص الأسمنت - م عبدالله نمير|
+| {{% button href="/Prep/files/Chem-Recap-WaterTreatment.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | ملخص معالجة المياه - م اسراء بدران|
 
 
 
