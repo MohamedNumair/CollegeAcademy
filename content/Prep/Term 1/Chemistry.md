@@ -58,3 +58,8 @@ weight : 1
 | {{% button href="/Prep/files/Chem-Future-Solutions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- المحاليل - م بسمة|
 | {{% button href="/Prep/files/Chem-Future-Cement_2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- الاسمنت 2  - م بسمة|
 
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=7176922&style=0001&nbdigits=5&type=page&initCount=500" title="Visits Count" Alt="analytics counter"   border="0" >
+</a>                                    
+                           
