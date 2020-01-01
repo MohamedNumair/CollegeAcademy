@@ -1,0 +1,715 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Artificial Intelligence</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="77ebfa99-3df4-4b8d-b455-6220d1ce90ad" class="page sans"><header><h1 class="page-title">Artificial Intelligence</h1></header><div class="page-body"><h1 id="0a5da9c3-5187-4817-bdfc-e88219ede33d" class="">Contents</h1><p id="cd8a0c51-6326-45eb-9ff5-ebc99959f40e" class="">
+</p><nav id="f922bdc0-7f92-49cd-8d58-7dff7dcd29bf" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0a5da9c3-5187-4817-bdfc-e88219ede33d">Contents</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c3151c88-0cf0-428f-85f7-48cf5835bf1b">Overview</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d0379dde-1ccf-43bc-922f-5feb49b6ebae"><mark class="highlight-teal">Dr. Abdellsalam</mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#725c379e-6129-4d14-a26f-882e303605ec"><mark class="highlight-teal">Dr. Refaat</mark></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7a089105-185d-44e1-b33d-904f01dff20e"><mark class="highlight-blue">Fuzzy </mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8b988643-1f33-4fd5-bc50-7d422f58ab2f">Paper Microgrid PV MPPT (hill climbing)</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a6926c8c-4558-4151-be15-1c7f0ccf30b2"><mark class="highlight-blue">Artificial Neural Networks</mark></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ed77c3c8-11f6-410a-9c17-ba5aae88e867"><mark class="highlight-blue">Genetic Algorithm</mark></a></div></nav><h1 id="c3151c88-0cf0-428f-85f7-48cf5835bf1b" class="">Overview</h1><p id="f0a63981-b5f2-4780-8dd1-f5ab0f54b712" class="">
+</p><div id="fdbe8d27-f376-4660-bf13-ceef054b7f34" class="column-list"><div id="0345047e-cb26-45fe-a89e-a10bcc5e3283" style="width:50%" class="column"><h3 id="d0379dde-1ccf-43bc-922f-5feb49b6ebae" class=""><mark class="highlight-teal">Dr. Abdellsalam</mark></h3><ul id="992f4b23-3140-462e-8ca4-2b0eecebb8b5" class="bulleted-list"><li>Lec 1: Fuzzy Chapter:  Introduction</li></ul><ul id="fda23929-4c9c-4366-aee2-43b1c0449c1c" class="bulleted-list"><li>Lec 2: Fuzzy Chapter: Methods and Examples</li></ul><ul id="7c2fd8ab-16bd-4107-bfbd-440f22d879b1" class="bulleted-list"><li>Lec 3: Fuzzy Chapter: Speed Response</li></ul><ul id="489ca577-6965-45d0-88e7-2b5a8515e036" class="bulleted-list"><li>Lec 4: Fuzzy Chapter: Wind</li></ul><ul id="36e98475-beff-4ddd-a4fb-9a3d337df8d4" class="bulleted-list"><li>Lec 5: Research papers:</li></ul><ul id="0010591a-e665-48a5-a1d9-80b9ccec2e99" class="bulleted-list"><li>Lec 6: Research papers:<ul id="99a3f1f4-d6f5-4a8f-89ff-ed34a0694ca7" class="toggle"><li><details ><summary><mark class="highlight-orange"><em>DATA :</em></mark></summary><figure id="2081f847-c13f-4f18-a771-eae555c2cc9a"><div class="source"><a href="Artificial%20Intelligence/Fuzzy_Chapter.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4f978c0e-27ee-4832-a368-4963d1e67924/Fuzzy_Chapter.pdf</a></div></figure><figure id="796f2051-3343-4956-817f-06073f40cb56"><div class="source"><a href="Artificial%20Intelligence/Drawing11.vsdx">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7c0e7117-5366-4b84-825e-e0c16548a62b/Drawing11.vsdx</a></div></figure><figure id="9d5f9cbe-b2ae-4c19-a16e-e92381609eb4"><div class="source"><a href="Artificial%20Intelligence/Applying_Table_of_rules_on_graph.docx">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1fe59d54-9bbb-40a8-bbcd-923e267dd173/Applying_Table_of_rules_on_graph.docx</a></div></figure><figure id="76ccaebc-997c-41f2-8610-ffca1d5a37ee"><div class="source"><a href="Artificial%20Intelligence/FLC2_3.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/257adf97-ca63-4192-93be-c830528aa1f6/FLC2_3.pdf</a></div></figure><figure id="aabbf7a2-9773-418d-b0fd-f65a3711280b"><div class="source"><a href="Artificial%20Intelligence/Adzic_Ivanovic_Adzic_Katic_17.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a117bf0-9f77-43ca-b8b7-8fd500fd9a3c/Adzic_Ivanovic_Adzic_Katic_17.pdf</a></div></figure><figure id="ed14154a-9e20-4362-a642-f6241c274eeb"><div class="source"><a href="Artificial%20Intelligence/Application_of_Fuzzy_Control_in_a_Photovoltaic_Gri.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7c751e79-e263-41fc-9fa2-4e12b1d4e60e/Application_of_Fuzzy_Control_in_a_Photovoltaic_Gri.pdf</a></div></figure><figure id="0c082b38-de9b-4b4f-a2a8-6d50a939117b"><div class="source"><a href="Artificial%20Intelligence/FLC2_3%201.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2250f405-da2d-46fb-940c-d58bcd4a7a5b/FLC2_3.pdf</a></div></figure><figure id="aff2a612-147c-4155-97ef-e8104f02da33"><div class="source"><a href="Artificial%20Intelligence/radppr.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/93655101-a07d-442e-b34c-1cf20756ca2b/radppr.pdf</a></div></figure><figure id="d456194c-6dad-4d52-b341-350333e8f55f"><div class="source"><a href="Artificial%20Intelligence/simoes1997.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fd9e0262-14ac-4cdd-b954-49ff2c98340d/simoes1997.pdf</a></div></figure><figure id="d8840e9f-a5f2-4585-aede-d5b5e522eb37"><div class="source"><a href="Artificial%20Intelligence/1-s2.0-S2314717218300254-main.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23f99294-06cd-4ce3-82df-10d7d695ccdb/1-s2.0-S2314717218300254-main.pdf</a></div></figure><figure id="072b15a3-a82a-4ff7-992c-f7f4215d7704"><div class="source"><a href="Artificial%20Intelligence/Speed_control_of_DC_motor_using_Fuzzy_Logic_Controller.zip">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/33235a12-3e5e-4c64-b86a-89edbc2ecb8e/Speed_control_of_DC_motor_using_Fuzzy_Logic_Controller.zip</a></div></figure></details></li></ul><p id="65782ebf-c4c1-492b-bb22-d36e64b1f327" class="">
+</p><p id="4f02a222-9e0d-46ef-bc26-51644f394c5d" class=""><mark class="highlight-orange"><em> </em></mark></p><p id="231879ce-2708-44b1-bcdf-1d80b413080f" class="">
+</p></li></ul></div><div id="97dba888-159a-466d-b742-93a8af1f71c0" style="width:50%" class="column"><h3 id="725c379e-6129-4d14-a26f-882e303605ec" class=""><mark class="highlight-teal">Dr. Refaat</mark></h3><p id="8acd5c21-c0d2-4281-96d6-4de3fa456094" class="">
+</p><ul id="1be35a15-689a-45e1-90de-43a3a884f1a2" class="bulleted-list"><li>Lec 7: Neural Network</li></ul><ul id="08a4f23f-2b30-41ea-b712-fba4a522d83b" class="bulleted-list"><li>Lec 8: Neural Network Training</li></ul><ul id="29cbf609-1aa8-4a40-a0bf-7c67079272eb" class="bulleted-list"><li>Lec 9: Genetic Algorithm</li></ul><ul id="84034fbf-8cd4-4e2e-88e1-ff90f30b34a8" class="bulleted-list"><li>Lec 10: Genetic Algorithm</li></ul><p id="c8d5d68a-0fae-4ed5-9fbb-bb4e0ec734c6" class="">
+</p><p id="2538f7ce-aeb6-4f84-a5dc-70a2f7384038" class="">
+</p><ul id="3aece8c7-6091-4cad-bf7f-0bf317637c98" class="toggle"><li><details ><summary><mark class="highlight-orange"><em>DATA : </em></mark></summary><figure id="5abc67a1-ba90-4a1b-9c9e-ed72be1441fd"><div class="source"><a href="Artificial%20Intelligence/ANN.rar">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e96c8ce3-9107-4caa-857f-b41f2773056d/ANN.rar</a></div></figure><figure id="df589dad-4c35-4227-87b8-30890d7917e2"><div class="source"><a href="Artificial%20Intelligence/Lecture_Neural_Networks.ppt">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f99f664d-f2bf-4079-8911-4c4c3277b8ff/Lecture_Neural_Networks.ppt</a></div></figure><figure id="76918702-d72d-467e-883a-1b114b4497b8"><div class="source"><a href="Artificial%20Intelligence/genetic.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/51d0bb18-7f2c-4b03-9544-e34b2c2eb251/genetic.pdf</a></div></figure></details></li></ul><p id="7e2e1d36-6369-4347-89d3-3188d3ed90ba" class="">
+</p><p id="72554499-0dce-453b-9298-f0dc3dc58f61" class="">
+</p></div></div><p id="a5ed88f3-22ee-4eb9-81ad-38a75952fa9f" class="">
+</p><h1 id="7a089105-185d-44e1-b33d-904f01dff20e" class=""><mark class="highlight-blue">Fuzzy </mark></h1><p id="0b74d1f9-ab3f-4c26-b4eb-525958a6e76e" class="">
+</p><ul id="84487067-9f81-42ed-9e87-fc5da37cd737" class="toggle"><li><details ><summary>What is<mark class="highlight-teal"> fuzzy logic</mark> (FL)?</summary><p id="38112c83-4dfd-414b-b283-33ca37426a83" class="">class of AI, Based on the nature of fuzzy human thinking, deals with problems that have fuzziness or vagueness, defined as multi-valued logic (0 to I), deals with imprecise information</p></details></li></ul><ul id="b1a583ff-1d63-40d3-b573-146992e79b6c" class="toggle"><li><details ><summary>What&#x27;s a<mark class="highlight-teal"> fuzzy set</mark>?</summary><p id="b96a6969-3160-4012-ae4d-133ac04ed059" class="">fuzzy set (fuzzy value) theory based on FL, a particular object has a degree of membership in a given set that
+may be anywhere in the range of O (completely not in the set) to 1 (completely in the set)</p></details></li></ul><ul id="d908e4be-e1e1-495c-92ed-00d64ce75702" class="toggle"><li><details ><summary>What&#x27;s a <mark class="highlight-teal">Fuzzy problem</mark> ?</summary><p id="445bcacc-1a83-4ca3-8f71-c2043627140f" class="">an input/output, static, nonlinear mapping problem through a &quot;black box,&quot; as
+shown, all the input information is defined in the input space, it is processed in
+the black box, and the solution appears in the output space.</p><figure id="91b11ac9-47e2-4898-af6c-abe1d439c701" class="image"><a href="Artificial%20Intelligence/Untitled.png"><img style="width:520px" src="Artificial%20Intelligence/Untitled.png"/></a></figure><ul id="faa2a3e9-3980-4778-b9d9-31c610c19bb9" class="bulleted-list"><li>mapping can be static or dynamic, and the mapping characteristics are determined by the black box&#x27;s characteristics. </li></ul><ul id="28654ccd-31a0-48df-af35-b67261fede69" class="bulleted-list"><li>The black box cannot only be a fuzzy system, but also an ES, neural network, general mathematical system, such as differential equations, algebraic equations, etc., or anything else.</li></ul></details></li></ul><ul id="7501fa09-41fb-4e8b-a05a-7c88cc6fd222" class="toggle"><li><details ><summary>What&#x27;s a <mark class="highlight-teal">Membership Function</mark>? give examples .</summary><p id="67837667-8fe7-4119-b678-b65c80d9ce8d" class="">An MF is a <mark class="highlight-orange">curve</mark> that defines how the values of a fuzzy variable in a certain
+region are mapped to a membership valueμ ( or degree of membership) between 0 and I.</p><figure id="328c5404-f06a-42a2-8970-4523b94ee1b1" class="image"><a href="Artificial%20Intelligence/Untitled%201.png"><img style="width:713px" src="Artificial%20Intelligence/Untitled%201.png"/></a></figure><figure id="7e9a7638-9def-4f2b-a306-376744d74137" class="image"><a href="Artificial%20Intelligence/Untitled%202.png"><img style="width:722px" src="Artificial%20Intelligence/Untitled%202.png"/></a></figure><figure id="02d377d6-1d34-4928-abeb-f5d21699d41b" class="image"><a href="Artificial%20Intelligence/Untitled%203.png"><img style="width:718px" src="Artificial%20Intelligence/Untitled%203.png"/></a></figure></details></li></ul><ul id="c76ac0ad-df8d-450b-8c57-5a08cdd28f74" class="toggle"><li><details ><summary>What are the possible<mark class="highlight-teal"> operations </mark>on fuzzy ? what are its properties ?</summary><h2 id="8a0e0b95-eb71-4b25-9403-2b636e8378c2" class="">Operatoins</h2><p id="7e0dd599-9968-4eed-971b-601b74b1d70c" class="">OR :  max ( A,B)</p><p id="39a23bed-6e57-4627-aad4-071613cc5d25" class="">AND :   min ( A,B)</p><p id="de27b3bd-7674-4cc3-b9ea-d38b59473323" class="">NOT : NOT(A)=  1-(A)</p><p id="2390d370-6717-43c3-9375-43f119c43bdb" class="">Product : (same x axis ) multiply MFs</p><p id="259ef673-694b-436a-8a79-c823746883f2" class="">Power : raise MF to power of m( positive)</p><figure id="1ed653b9-391f-488b-bd91-0fc06c50bd27" class="image"><a href="Artificial%20Intelligence/Untitled%204.png"><img style="width:742px" src="Artificial%20Intelligence/Untitled%204.png"/></a></figure><h2 id="19324382-fd6c-4819-9ac5-0ef7badc9a80" class="">Properties :</h2><figure id="b79b5531-940d-4ae1-a8ed-185007ec892f" class="image"><a href="Artificial%20Intelligence/Untitled%205.png"><img style="width:438px" src="Artificial%20Intelligence/Untitled%205.png"/></a></figure><figure id="2019b7ff-9606-4053-864f-aa2a16d82b60" class="image"><a href="Artificial%20Intelligence/Untitled%206.png"><img style="width:483px" src="Artificial%20Intelligence/Untitled%206.png"/></a></figure></details></li></ul><ul id="83fb6155-5a23-48de-b9bc-f3a43055aa9f" class="toggle"><li><details ><summary> What does a<mark class="highlight-teal"> fuzzy inference</mark> problem consist of ?</summary><p id="2e843933-f9d9-401e-b422-eb3dce97c070" class="">• Step l: Fuzzification of input variables
+• Step 2: Application of fuzzy operator (AND, OR, NOT) in the IF (antecedent) part of the rule
+• Step 3: Implication from the antecedent to the consequent (THEN part of the rule)
+• Step 4: Aggregation of the consequents across the rules
+• Step 5: Defuzzification</p><figure id="24b9a552-adaf-47ed-819e-cd5d28a1394b" class="image"><a href="Artificial%20Intelligence/Untitled%207.png"><img style="width:741px" src="Artificial%20Intelligence/Untitled%207.png"/></a></figure><figure id="fc0e8c93-8bff-4e43-91fd-be6ed7c40920" class="image"><a href="Artificial%20Intelligence/Untitled%208.png"><img style="width:706px" src="Artificial%20Intelligence/Untitled%208.png"/></a></figure><p id="ad13666d-f59a-4e9c-9584-370f636fb2b1" class="">
+</p><p id="080c0aa8-6a0b-4c35-ab74-120f6a0607c2" class="">
+</p><p id="6bd474ba-aab8-4f0c-957a-84ac73fe5e6a" class="">
+</p></details></li></ul><ul id="366157dd-4145-41f6-896a-53c1dd607354" class="toggle"><li><details ><summary>Mention some of the <mark class="highlight-teal"><strong>implication methods</strong></mark> used in FL.</summary><h2 id="02b5ff4d-c826-46e2-99df-3d3378f73a97" class="">Mamdani Type</h2><figure id="2010c957-03d8-4bb2-ac1b-809f6c5a53e3" class="image"><a href="Artificial%20Intelligence/Untitled%209.png"><img style="width:670px" src="Artificial%20Intelligence/Untitled%209.png"/></a></figure><h2 id="4cc37347-7a1a-4874-9188-0e85dccc7751" class="">Lusing Larson Type</h2><figure id="74406d3d-f89f-4e06-a7ec-f39f4e060295" class="image"><a href="Artificial%20Intelligence/Untitled%2010.png"><img style="width:698px" src="Artificial%20Intelligence/Untitled%2010.png"/></a></figure><h2 id="4d397c7d-779f-4283-83da-ae9440c982ee" class="">Sugeno Type</h2><h3 id="9dcb9c56-faac-4e9a-86e4-f852872a5476" class="">Singleton (zero-order)</h3><p id="05e90487-8e82-40c4-8d8e-40e6b33400db" class="">rules states a K </p><figure id="5c312226-d36a-45ba-8462-bfef06aad4b8" class="image"><a href="Artificial%20Intelligence/Untitled%2011.png"><img style="width:246px" src="Artificial%20Intelligence/Untitled%2011.png"/></a></figure><figure id="05b2425b-ed53-40ab-94be-db4f31b5dfed" class="image"><a href="Artificial%20Intelligence/Untitled%2012.png"><img style="width:664px" src="Artificial%20Intelligence/Untitled%2012.png"/></a></figure><p id="94cf4785-c095-4820-a74b-1b538e4ae739" class="">
+</p><h3 id="c34dbe3a-eb5a-49e2-8b33-bee8b716a47c" class="">first-order</h3><p id="63b8a169-858d-4f0f-9df1-5ab1880efe32" class="">rules state operands</p><figure id="f7df7e3e-650b-4241-9033-9dbd89d82bb5" class="image"><a href="Artificial%20Intelligence/Untitled%2013.png"><img style="width:343px" src="Artificial%20Intelligence/Untitled%2013.png"/></a></figure><p id="d9f9045d-0b10-4de8-b62c-a9315e5723e3" class="">each rule as defining the location of a moving singleton. that is. the singleton output spikes can move around in a linear fashion in the output space depending on the input signal values</p><p id="272a8d1d-cea6-4ac8-a1c7-35c67f6b5443" class="">
+</p><figure id="3199bd4a-545f-4fb5-b97b-c5fbbc9b4276" class="image"><a href="Artificial%20Intelligence/Untitled%2014.png"><img style="width:692px" src="Artificial%20Intelligence/Untitled%2014.png"/></a></figure><p id="bc396d7f-e63e-422e-b4f2-7532f8180a63" class="">
+</p><p id="a393ad78-7a51-4189-a190-8ff3bba84849" class="">
+</p><p id="e120b9aa-2dcb-4de9-af36-b44a5ccdf368" class="">
+</p><p id="0b20425a-8e34-426e-a4fb-4e73d064c673" class="">
+</p><p id="cb76dc94-5253-47e4-bc17-3749f4df6b1b" class="">
+</p><p id="c989acd9-e7b5-4725-9281-5160a398e8b3" class="">
+</p><p id="1f6527a1-e67b-49ad-9d95-285517c28447" class="">Fuzzy model on DC Machine</p></details></li></ul><ul id="957bb17b-07ab-44da-9689-b1e545be15a9" class="toggle"><li><details ><summary>What&#x27;s <mark class="highlight-teal">defuzzifaction</mark>? mention its methods.</summary><p id="10136bf1-182d-41e0-886f-168d18e4104d" class="">it&#x27;s the conversion of the fuzzy output ( the aggregated union of the fired rules output) into a crisp output</p><p id="6b7fc166-2868-485e-999f-b4bd5dc03968" class="">its methods are :</p><ol id="92ec43d9-a830-4412-9edc-8b7883fa6110" class="numbered-list" start="1"><li><mark class="highlight-yellow_background">Center of Area (COA) method [ centre of gravity]</mark></li></ol><figure id="d6ceb24d-75ea-4a75-ad42-70d801fce3cc" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mo>∫</mo><mrow><mi>Z</mi><mi mathvariant="normal">.</mi><msub><mi>μ</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>(</mo><mi>Z</mi><mo>)</mo></mrow></mrow><mrow><mo>∫</mo><mrow><msub><mi>μ</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>(</mo><mi>Z</mi><mo>)</mo></mrow><mi>d</mi><mi>z</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">Z_{0} = \frac{\int {Z.\mu_{out}(Z)}}{\int {\mu_{out}(Z)}dz}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.5022400000000005em;vertical-align:-1.00112em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5011200000000002em;"><span style="top:-2.305em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">u</span><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="mclose">)</span></span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.69612em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="mord">.</span><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">u</span><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="mclose">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.00112em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="62e81340-a971-46bd-80c4-f6601012edea" class="">discrete :</p><figure id="aadca336-68be-42f1-9013-6b1dda3d23b2" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi>Z</mi><mi mathvariant="normal">.</mi><msub><mi>μ</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>(</mo><mi>Z</mi><mo>)</mo></mrow></mrow><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>μ</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>(</mo><mi>Z</mi><mo>)</mo></mrow><mi>d</mi><mi>z</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">Z_{0} = \frac{\sum_{i=1}^{n}{Z.\mu_{out}(Z)}}{\sum_{i=1}^{n} {\mu_{out}(Z)}dz}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.488004em;vertical-align:-0.994002em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.494002em;"><span style="top:-2.305708em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">u</span><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="mclose">)</span></span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.6897100000000003em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="mord">.</span><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">u</span><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="mclose">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.994002em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="4f7a1c98-8298-478f-9453-16d81873e586" class="">Ex: </p><p id="aecb8fba-d06c-431f-9828-70c8271b4f7b" class="">
+</p><figure id="c6e038b7-ee29-4375-bf09-4aed761389b5" class="image"><a href="Artificial%20Intelligence/Untitled%2015.png"><img style="width:421px" src="Artificial%20Intelligence/Untitled%2015.png"/></a></figure><figure id="a3ca889f-b0c8-4b3d-939f-e9eaa2624f41" class="image"><a href="Artificial%20Intelligence/Untitled%2016.png"><img style="width:402px" src="Artificial%20Intelligence/Untitled%2016.png"/></a></figure><p id="8e1a3d46-aff7-4719-81b7-84dc33719ed0" class="">
+</p><p id="cb298d57-f14a-41dc-b9d1-1d5c393d7aec" class=""><mark class="highlight-yellow_background">2. Height Method</mark></p><p id="e0d6046e-a569-47b9-a29a-ebde19fd889a" class="">COA but consider only the height of each contributing MF at the mid-point of the base.</p><p id="a1ee7a99-1649-4b37-b03e-faff572a05cd" class="">
+</p><figure id="b5f1647a-f747-447c-93ae-9c30a7374097" class="image"><a href="Artificial%20Intelligence/Untitled%2017.png"><img style="width:190px" src="Artificial%20Intelligence/Untitled%2017.png"/></a></figure><p id="2a281ceb-4388-4153-96df-d890a3fab9c3" class=""><mark class="highlight-yellow_background">3. Mean of Maxima (MOM) Method </mark></p><p id="2605c39c-32a3-43e4-8ab4-1debc5b32f43" class="">takes only the z of the highest MF (for above example Z0= 3 )</p><p id="940031c2-4159-44b2-91db-64ec525f89fa" class="">for m number of MFs that have the same height take the average</p><p id="b2c1f851-30aa-408b-9b0b-e8ef7c74e391" class="">
+</p><p id="3ed97de3-736b-438f-bad8-749919d90783" class=""><mark class="highlight-yellow_background">4. Sugeno Method</mark></p><p id="ce9e8647-c285-4e61-a5ed-6441dc5efee2" class="">
+</p><p id="ca64b91a-984f-481e-bf8f-270ec6845d44" class="">zero order</p><p id="f54b62b1-d204-4f6c-8e50-db1dd2fa50c8" class="">
+</p><figure id="79d98a04-d9e5-4e82-9239-74a097c11517" class="image"><a href="Artificial%20Intelligence/Untitled%2018.png"><img style="width:297px" src="Artificial%20Intelligence/Untitled%2018.png"/></a></figure><p id="e190a7dd-b0f8-46e6-b9b3-5752e3a8d954" class="">
+</p><p id="6fdf110e-6842-44f7-a750-71f02494c97f" class="">first order</p><p id="31967808-23c3-4b93-91ea-a0e0102e07b9" class="">
+</p><figure id="f346f857-d8e0-48ef-ae70-c58ce0a55978" class="image"><a href="Artificial%20Intelligence/Untitled%2019.png"><img style="width:303px" src="Artificial%20Intelligence/Untitled%2019.png"/></a></figure></details></li></ul><ul id="4f97ce12-8a21-4065-9368-5d33a50e64ba" class="toggle"><li><details ><summary>What&#x27;s<mark class="highlight-teal"> Fuzzy Control (FC)</mark>?</summary><p id="e2248a6b-da04-4ce5-b1c7-ae03a7fa0cfc" class="">Fuzzy control is basically an <mark class="highlight-yellow">adaptive </mark>and <mark class="highlight-yellow">nonlinear</mark>
+control, which gives robust performance for a linear or nonlinear plant with parameter variation</p></details></li></ul><ul id="a6fef6e0-2662-4b52-a85e-687e5d8955a8" class="toggle"><li><details ><summary>How to implement a <mark class="highlight-teal">P, PI and PID</mark> control in fuzzy?</summary><p id="6909248d-3d08-4c0f-8255-795812e98d70" class="">only by using the E error and CE change of error signals we can use </p><h2 id="055dbf43-14df-48f8-8475-188681e958de" class="">P control</h2><p id="66ca6b69-98ab-448b-8b45-df847a5c431a" class="">as example rule: IF E = positive small (PS) THEN U = positive big (PB)</p><p id="fd38f5df-8d42-4cd7-899f-54c3eda7e36e" class="">so, only kp  = K and KE=U</p><h2 id="965cc91c-a2b7-401e-9508-dd2295420359" class="">PI Control</h2><p id="6546c51a-1f2f-418f-af8b-1feb2d45c18b" class="">
+</p><p id="86d249a2-1708-46d2-bcd8-88657f3654d6" class="">Rule I: IF E = ZE AND CE= NS THEN DU= NS
+Rule 2: IFE= PS AND CE= NS THEN DU= ZE</p><figure id="90486365-0160-41fe-b5f0-4939aafd839f" class="image"><a href="Artificial%20Intelligence/Untitled%2020.png"><img style="width:163px" src="Artificial%20Intelligence/Untitled%2020.png"/></a></figure><p id="09497b15-76a7-446f-9871-3bd8c8054918" class="">and to get U we integrate or sum</p><p id="3ad455af-6984-47f9-82ac-121f71c492e0" class="">
+</p><figure id="d10f6bcb-af9b-41de-9999-c06a3c1fc89f" class="image"><a href="Artificial%20Intelligence/Untitled%2021.png"><img style="width:325px" src="Artificial%20Intelligence/Untitled%2021.png"/></a></figure><p id="74c69d63-7972-4475-a25c-1f16c20005c6" class="">so,</p><figure id="dc3d5b8c-9a9b-4552-99a7-c7ad409ba4a5" class="image"><a href="Artificial%20Intelligence/Untitled%2022.png"><img style="width:214px" src="Artificial%20Intelligence/Untitled%2022.png"/></a></figure><h2 id="b546f446-7521-4027-bda0-de7b9f6f8a31" class="">PID Controller</h2><p id="c8335d45-ab10-46de-b16f-9732b4c636f5" class="">example rule: IF E = PS AND CE= NS AND e&#x27; E = PS THEN DU= ZE,</p><figure id="f0496fe5-38dd-41c0-b9dc-f1c6b9bf2d29" class="image"><a href="Artificial%20Intelligence/Untitled%2023.png"><img style="width:326px" src="Artificial%20Intelligence/Untitled%2023.png"/></a></figure><p id="4b578641-d529-4db1-9821-13b5d18e919e" class="">
+</p></details></li></ul><ul id="41eb3bd0-e1a3-4da4-bfef-712b9ea4179e" class="toggle"><li><details ><summary>Draw a general fuzzy control<mark class="highlight-teal"> block diagram</mark>, with the <mark class="highlight-teal">general structure</mark> of a fuzzy feedback control system.</summary><p id="06c585e8-c0e0-4597-916c-111f7428e767" class="">in control of the speed in induction machine (VC based)</p><figure id="9c798812-ddf0-42ae-ae26-5614e65ab1b4" class="image"><a href="Artificial%20Intelligence/Untitled%2024.png"><img style="width:731px" src="Artificial%20Intelligence/Untitled%2024.png"/></a></figure><p id="8c984bff-d150-4206-8c8d-250c28c2ed98" class=""> the general structure of a fuzzy feedback control system</p><figure id="786e3b6b-a2a6-48a1-99a0-5730c9179d10" class="image"><a href="Artificial%20Intelligence/Untitled%2025.png"><img style="width:702px" src="Artificial%20Intelligence/Untitled%2025.png"/></a></figure></details></li></ul><ul id="09dc3ea9-f997-4f53-b36d-53370d1a1ed6" class="toggle"><li><details ><summary>What are the available <mark class="highlight-teal">control implementation</mark> methods for fuzzy control ?</summary><ol id="a235db65-6cb3-4e4d-998f-84c8357531b9" class="numbered-list" start="1"><li>Using real time computation (C program, FL Toolbox or DSP ASIC chips)</li></ol><ol id="e76b179a-0cc9-4924-b9c1-e3bff532254f" class="numbered-list" start="2"><li>Using a look up table where all computation are done a head in hierarchical tables (coarse, medium and fine)</li></ol><p id="f137b346-f2ef-417e-b1d1-c03bfa6fd023" class="">
+</p></details></li></ul><ul id="932b527f-234e-4caa-9fdc-e94e8c35043f" class="toggle"><li><details ><summary>What is the fuzzy logic control <mark class="highlight-teal">design methodology</mark>?</summary><ol id="d0eae9c1-937e-4f6c-9311-c277ffd28e69" class="numbered-list" start="1"><li>Analyze if the problem <mark class="highlight-yellow">requires </mark>FC ?</li></ol><ol id="12fb0e84-9b7e-49dc-b1f9-b3392fa2921d" class="numbered-list" start="2"><li>get design info and experience from <mark class="highlight-yellow">operator</mark>.</li></ol><ol id="0ae9a8db-2741-4904-b7c0-34c0db27760e" class="numbered-list" start="3"><li>if plant model available simulate it and study its <mark class="highlight-yellow">characteristics</mark>.</li></ol><ol id="9d2fbb2f-eb75-4847-a4e4-50816022d2cc" class="numbered-list" start="4"><li>identify functional elements<mark class="highlight-yellow"> where to</mark> apply FL.</li></ol><ol id="18e4677b-8760-4a14-adb3-92f1f1650655" class="numbered-list" start="5"><li>identify the <mark class="highlight-yellow">inputs and outputs</mark> of each fuzzy sys.</li></ol><ol id="60179395-58cf-412b-a154-e098b053ff89" class="numbered-list" start="6"><li>define universe of discourse and convert to pu values.</li></ol><ol id="05ddc274-152d-4765-ad62-9c40926776c8" class="numbered-list" start="7"><li>formulate fuzzy sets, choose MF shapes<ul id="e026fa73-52d5-4f60-8e64-d47e56021808" class="bulleted-list"><li>sensitive : need more fuzzy sets</li></ul><ul id="521d62b5-7ba6-4b33-a001-4fa980d1f393" class="bulleted-list"><li>more precision near S.S : crowding of MFs near the origin</li></ul></li></ol><ol id="1c9e41c2-7641-40a5-89d5-ddf2baa71389" class="numbered-list" start="8"><li>formulate <mark class="highlight-yellow">rule table.</mark></li></ol><ol id="dd761026-401f-47c6-b52f-b08158e77ebd" class="numbered-list" start="9"><li>if there is a plant <mark class="highlight-yellow">model </mark>, test and <mark class="highlight-yellow">iterate</mark> fuzzy sets and rules<p id="4fbae55e-5776-40fc-a662-bb2c283136ac" class="">if not available, design a conservative fuzzy control and test on plant operation.</p></li></ol><ol id="2668abfe-39ea-4964-8bf4-7bafcc8b9c3d" class="numbered-list" start="10"><li>implement in <mark class="highlight-yellow">real time,</mark> and iterate to improve performance</li></ol><p id="9d5fb4e7-76e8-42c7-84bb-feba82bc5e28" class="">
+</p></details></li></ul><ul id="3033d5df-eda5-489d-b548-ee6af019cb4c" class="toggle"><li><details ><summary>Mention some of fuzzy logic control <mark class="highlight-teal">applications </mark>in power electronic systems.</summary><p id="f67ffbdd-b387-4ae9-b4d3-7ea49d039605" class="">Applications include
+1. speed control of dc and ac drives</p><p id="5bbd0859-443d-4dbb-bfd8-883eb8749933" class="">2. feedback control of converter
+3. off-line P-I and P-I-D tuning.
+4. nonlinearity compensation
+5. on-line and off-line diagnostics
+6. modeling
+7. parameter estimation.
+8. performance optimization of drive systems based on on-line search
+9. estimation for distorted waves</p></details></li></ul><ul id="2793da67-65b5-4fed-936e-db75bdc98ef4" class="toggle"><li><details ><summary>Draw the fuzzy MFs for induction motor speed control.</summary><p id="8ad96c32-8abd-4d56-a380-f2df50b383f1" class="">
+</p><figure id="d2bdfbe1-ba31-43a7-a8aa-c60c79bc22fb" class="image"><a href="Artificial%20Intelligence/Untitled%2026.png"><img style="width:638px" src="Artificial%20Intelligence/Untitled%2026.png"/></a></figure><figure id="6b0b5433-2e2e-4b5c-bd8a-2a36d3d08d6a" class="image"><a href="Artificial%20Intelligence/Untitled%2027.png"><img style="width:506px" src="Artificial%20Intelligence/Untitled%2027.png"/></a></figure></details></li></ul><ul id="d394ba58-3b31-4671-9a75-15573a52484d" class="toggle"><li><details ><summary>write down a rule matrix for fuzzy speed control</summary><p id="d18a2030-5290-4f91-80e7-acf3867ec49b" class="">
+</p><figure id="e41b432b-f420-4374-99ed-4f25132423e3" class="image"><a href="Artificial%20Intelligence/Untitled%2028.png"><img style="width:548px" src="Artificial%20Intelligence/Untitled%2028.png"/></a></figure><figure id="ba0aa0a5-9b7e-43e1-9206-f460e057adc0" class="image"><a href="Artificial%20Intelligence/Untitled%2029.png"><img style="width:339px" src="Artificial%20Intelligence/Untitled%2029.png"/></a></figure><p id="b2f590b3-92f3-4032-b8bb-23aadadbd35d" class="">
+</p></details></li></ul><ul id="fa438810-45e5-4aca-910f-de617295b827" class="toggle"><li><details ><summary>draw the typical speed response with stepped load torque TL, and then show a similar response with four times the rotor inertia, comment.</summary><p id="85f72721-7ca7-4554-b21e-f290e65ce6d4" class="">
+</p><figure id="fa14d556-c615-4c7f-bcb2-2a5b3b2f3378" class="image"><a href="Artificial%20Intelligence/Untitled%2030.png"><img style="width:408px" src="Artificial%20Intelligence/Untitled%2030.png"/></a></figure><figure id="e273f505-1c33-441b-b773-00677858840b" class="image"><a href="Artificial%20Intelligence/Untitled%2031.png"><img style="width:432px" src="Artificial%20Intelligence/Untitled%2031.png"/></a></figure><p id="92113191-b53b-4247-a2c2-bafe8d3ef660" class="">The performances are superior to conventional PI control. The robustness in the response is evident from the results., with more inertia it took more time to get to ss but it did due to robustness of the controller and parameter variation (inertia) didn&#x27;t affect its response not mentioning its stability.</p><p id="6a54f6fa-319b-491f-aabb-5ed34dd455a1" class="">
+</p></details></li></ul><ul id="fe96d218-4ab6-494a-ae2e-4eca228c07a0" class="toggle"><li><details ><summary>draw  the block diagram of the wind generation system incorporating all the control elements.</summary><figure id="edc8bf01-9004-4638-8436-eba221be1805" class="image"><a href="Artificial%20Intelligence/Untitled%2032.png"><img style="width:697px" src="Artificial%20Intelligence/Untitled%2032.png"/></a></figure></details></li></ul><ul id="86c59000-75f3-406d-ba2b-b41aad9009df" class="toggle"><li><details ><summary>Discuss the fuzzy control loops in wind mppt</summary><p id="ab1f6227-1c27-446e-98fd-f20dc7ef83f6" class="">
+</p><figure id="a8fa60cc-a5a3-43e2-ab91-a0237d61e402" class="image"><a href="Artificial%20Intelligence/Untitled%2033.png"><img style="width:554px" src="Artificial%20Intelligence/Untitled%2033.png"/></a></figure><ul id="73a5e501-9cfd-4742-8445-033ad081024e" class="toggle"><li><details ><summary>FLC-1: On-line search of generator speed to maximize output power</summary><p id="2fc0cebc-7482-4483-afcb-b9fd42aad1c2" class="">
+</p><p id="9b4303e1-3849-4b9f-9a3d-f3e4ac11a995" class="">
+</p><figure id="90d85b1d-52ae-4ef2-9096-bb91545b07fd" class="image"><a href="Artificial%20Intelligence/Untitled%2034.png"><img style="width:726px" src="Artificial%20Intelligence/Untitled%2034.png"/></a></figure><p id="af498164-07a3-4695-97e6-0d9e8900c78e" class="">
+</p><figure id="91b81f95-bdec-4144-a074-c258af81f8ad" class="image"><a href="Artificial%20Intelligence/Untitled%2035.png"><img style="width:523px" src="Artificial%20Intelligence/Untitled%2035.png"/></a></figure><ul id="fae34c1e-75db-4e0d-861e-312ce5447115" class="bulleted-list"><li>power is the product of torque and speed and turbine power equals line output power.</li></ul><ul id="c2947a49-5e91-47e9-aa7b-c198be93a59d" class="bulleted-list"><li> the output Delta w added with some amount of the Last Delta w signal to <mark class="highlight-orange">avoid local minima</mark> due to wind vortex and torque ripple.</li></ul><p id="befc04a4-4b84-4b9f-bb49-169e24075015" class="">
+</p><figure id="fb01e48e-fcd7-4387-b331-eaad6cd0a473" class="image"><a href="Artificial%20Intelligence/Untitled%2036.png"><img style="width:746px" src="Artificial%20Intelligence/Untitled%2036.png"/></a></figure><p id="c273e38b-871d-4fbc-bc1b-b3055332f02d" class="">
+</p><h3 id="a78caa54-fc21-48e9-b1a7-3b970d3f93cf" class="">Factors Calculation</h3><p id="ab045fa4-ddb0-422d-8d87-dc0e84422482" class="">The scale factors KPO and KWR, shown in Figure 11.28, are a function of generator speed so that the control becomes somewhat insensitive to speed variation. Although scale factors are normally generated by mathematical expression, in this case, they arc generated by fuzzy computation</p><figure id="e7943801-66f7-4f46-a4ff-19141607bb5e" class="image"><a href="Artificial%20Intelligence/Untitled%2037.png"><img style="width:681px" src="Artificial%20Intelligence/Untitled%2037.png"/></a></figure></details></li></ul><ul id="256e4f64-b10e-470f-8ee1-79978e3a9fc5" class="toggle"><li><details ><summary>FLC-2: On-line search of machine excitation current to optimize machine efficiency at light load</summary><p id="d3885745-80f4-4481-916c-dc4989eb8e4b" class="">
+</p><figure id="1dd4622b-308c-4f5a-842d-4d5e7a27a317" class="image"><a href="Artificial%20Intelligence/Untitled%2038.png"><img style="width:655px" src="Artificial%20Intelligence/Untitled%2038.png"/></a></figure><figure id="052c4264-1a62-4cdf-8957-c167e96ed4b0" class="image"><a href="Artificial%20Intelligence/Untitled%2039.png"><img style="width:728px" src="Artificial%20Intelligence/Untitled%2039.png"/></a></figure></details></li></ul><ul id="1f8279f2-a45f-444a-a1b6-7870a013f074" class="toggle"><li><details ><summary>FLC-3: Robust control of generator speed</summary><p id="9bcf766e-4c15-460f-88db-1f2b79e23466" class="">
+</p><figure id="3932f97f-d3ec-44f3-bd60-cd38a29e3ba2" class="image"><a href="Artificial%20Intelligence/Untitled%2040.png"><img style="width:658px" src="Artificial%20Intelligence/Untitled%2040.png"/></a></figure></details></li></ul></details></li></ul><ul id="3fde8672-6fcc-4b02-bacf-90f2a83592a2" class="toggle"><li><details ><summary>Discuss efficiency improvement under FLC1 and FLC2 </summary><p id="ca149ff0-564e-4177-ab06-787647c7fe1d" class="">
+</p><ul id="1c047a9a-cc57-4cc6-a3c3-e9401bacb8c9" class="bulleted-list"><li>The gain due to FLC- I by tuning the generator speed to optimal value can be very high at low wind velocity although P0 may be small<ul id="abb22779-7a8a-46a2-8eec-dc580c18d2e6" class="bulleted-list"><li>It decreases to zero near 0.7(pu) wind velocity</li></ul><ul id="25c82632-0b75-4aeb-8405-bf5a7c56642b" class="bulleted-list"><li>and then increases again</li></ul></li></ul><ul id="a5d30286-9b43-48fc-8f0a-a57a3b8a3034" class="bulleted-list"><li>the efficiency gain by FLC-2 decreases because of higher generator
+loading.</li></ul><figure id="c7e30060-e84e-4658-820a-727445a3c54d" class="image"><a href="Artificial%20Intelligence/Untitled%2041.png"><img style="width:621px" src="Artificial%20Intelligence/Untitled%2041.png"/></a></figure></details></li></ul><p id="05a17430-94d3-4b5c-9fa7-a8ddb0e40502" class="">
+</p><h3 id="8b988643-1f33-4fd5-bc50-7d422f58ab2f" class="">Paper Microgrid PV MPPT (hill climbing)</h3><p id="85a42a0c-5b27-43ba-84ca-448d9b37758e" class="">
+</p><ul id="ea5ea39c-1959-4a1f-ac24-80abea659669" class="toggle"><li><details ><summary>define Microgrids.</summary><p id="cc38cf8a-bdac-4db3-96c1-907db4b45a30" class="">Microgrids are defined as systems that have at least one distributed energy source and associated loads and can form intentional islands in the electrical distribution systems</p></details></li></ul><ul id="38bcf057-113b-45ae-af32-0c430b652bdb" class="toggle"><li><details ><summary>What are PV systems main problems?</summary><ol id="20388190-d822-4eb6-9971-e937b332f20d" class="numbered-list" start="1"><li>High fabrication cost</li></ol><ol id="0d3ccfb9-09f3-4a37-b156-702368eb36bd" class="numbered-list" start="2"><li>Low conversion efficiency especially under variable weather conditions</li></ol><ol id="c2b2ae4b-effa-4bc2-9a44-71d2beed5e1e" class="numbered-list" start="3"><li>The nonlinearity between the PV array output power and
+current</li></ol></details></li></ul><ul id="71b7329a-0412-486b-bd67-4bff30d8034d" class="toggle"><li><details ><summary>what&#x27;s Ripple correlation control (RCC)</summary><p id="738a8229-3c84-48b4-b159-2dc66c709718" class="">is an optimization technique that takes advantage of the converter signal ripple to track the MPP</p></details></li></ul><ul id="a8623321-529f-4f93-ab5d-c2b85f023f31" class="toggle"><li><details ><summary>what are the drawback of old MPPT tracking methods (fuzzy or not)</summary><p id="bcfee9c4-4113-43f8-abb3-3cb2ce2cb991" class="">like current-power change method is that the operating point is mover away from the maximum point when irradiance changes</p></details></li></ul><ul id="73346536-8de0-4dda-8d9d-a42916d206ca" class="toggle"><li><details ><summary>show the effect of increasing radiation and temperature on P-D curve.</summary><figure id="38e37ede-0798-459d-983a-23751c28f56c" class="image"><a href="Artificial%20Intelligence/Untitled%2042.png"><img style="width:384px" src="Artificial%20Intelligence/Untitled%2042.png"/></a></figure></details></li></ul><ul id="1f98af5e-8469-4a77-a84b-de758290e5f3" class="toggle"><li><details ><summary>What are hill-climbing technique advantages and disadvantages?</summary><p id="90206abe-46f8-4bff-9956-daf37a8a500f" class="">Advantages :</p><ol id="9038fde2-fbe0-4e74-b0fb-3ba774e499f6" class="numbered-list" start="1"><li>Simplicity</li></ol><ol id="4b67aef4-5440-49fa-a0f0-0c86a6ece267" class="numbered-list" start="2"><li>Easy implementation</li></ol><ol id="6a4b8ba8-9bc7-46cb-8f61-7d55b0da98ae" class="numbered-list" start="3"><li>low cost</li></ol><p id="37c7aed9-d521-467c-8e73-65d060ae8dff" class="">Disadvantages :</p><ol id="a332e7c2-a14d-413a-b3bc-7bff3658832b" class="numbered-list" start="1"><li>Slow converge to optimum point</li></ol><ol id="b8b1e928-c84c-45a9-aaa4-6d3541b958b1" class="numbered-list" start="2"><li>at SS power oscillates around MPP, causing losses</li></ol><ol id="1206e90f-29e3-42d0-ab95-f4c138af4967" class="numbered-list" start="3"><li>during cloudy when irradiance varies, operating point may move away from MPP.</li></ol></details></li></ul><ul id="84926a88-22bf-4df6-b1ab-8b415e952e30" class="toggle"><li><details ><summary>what are the conventional method to overcome hill-climbing shortcomings</summary><p id="99f460d6-78e1-4e47-948c-46fca42d1d73" class="">adaptive-based controller to enhance the steady state and converging-speed performance. At steady state, the incremental step is small and during a transient stage the incremental step size is large.</p><figure id="d20206ce-a55c-40f1-8b05-471a6fef119b" class="image"><a href="Artificial%20Intelligence/Untitled%2043.png"><img style="width:185px" src="Artificial%20Intelligence/Untitled%2043.png"/></a></figure></details></li></ul><ul id="5721ca7a-756b-4c33-b5c1-a5b7b32e2ec7" class="toggle"><li><details ><summary>What&#x27;s the proposed hill climbing using FLC.</summary><p id="8df904a4-c5d3-4a91-968f-824808d1b538" class="">
+</p><figure id="7de6ca6b-b202-4908-8488-aba1ba6ad823" class="image"><a href="Artificial%20Intelligence/Untitled%2044.png"><img style="width:516px" src="Artificial%20Intelligence/Untitled%2044.png"/></a></figure></details></li></ul><ul id="286c64cd-835b-473d-9854-7ea3bb7ee26e" class="toggle"><li><details ><summary>How to ensure PV output doesn&#x27;t diverge from mpp with varying weather (3rd drawback solution)</summary><p id="03d2953f-0e19-4203-84b3-2bbdb04ecb6d" class="">To ensure that the PV output power does
+not diverge from the optimum point during varying weather
+conditions, ΔP passes through a gain controller to reverse its
+direction.</p></details></li></ul><ul id="c1c2418a-39e6-4472-85b5-f02721a5a7e8" class="toggle"><li><details ><summary>Write down rules of hill climbing, and MF function</summary><figure id="6037ed75-1445-4eca-9303-25bcb37f95fc" class="image"><a href="Artificial%20Intelligence/Untitled%2045.png"><img style="width:899px" src="Artificial%20Intelligence/Untitled%2045.png"/></a></figure><p id="fef36e01-81ce-4734-8d64-21706e74a4b2" class="">
+</p><figure id="e9b4051f-8e43-49b3-8f42-e7808efe5177" class="image"><a href="Artificial%20Intelligence/Untitled%2046.png"><img style="width:875px" src="Artificial%20Intelligence/Untitled%2046.png"/></a></figure></details></li></ul><ul id="9a5f4328-9ed6-40cb-9e3a-52829012f64b" class="toggle"><li><details ><summary>What advantages does the FLC hill-climbing MPP has?</summary><p id="09cdbb5c-2255-49d9-8ca3-d4ae9e106ea6" class="">The FLC computes variable step sizes to increment or decrement the duty cycle, therefore the tracking time is short and the system performance during steady-state conditions is much better than with conventional hill-climbing algorithm. Moreover, divergence problem no longer exist since the controller input, change of power (dP), reverses its direction in response to atmosphere condition variation</p></details></li></ul><ul id="f2f6ab4c-0567-4154-8064-c5a4df927a87" class="toggle"><li><details ><summary>Explain the power divergence due to weather variation</summary><p id="0845aca3-f901-4d17-a2da-a4199bf8ac93" class="">
+</p><figure id="83088ba1-d61d-4ab1-832e-c6f2aa62680f" class="image"><a href="Artificial%20Intelligence/Untitled%2047.png"><img style="width:439px" src="Artificial%20Intelligence/Untitled%2047.png"/></a></figure></details></li></ul><ul id="1900684a-604e-435a-a1f3-b271b2196591" class="toggle"><li><details ><summary>what&#x27;s the effect of partial shading on hill climbing technique?</summary><p id="f1bdd8c1-62de-47ef-a78c-24418dc67c05" class="">
+</p><figure id="dbd555bf-e6e8-479f-ac00-738c4673e1b9" class="image"><a href="Artificial%20Intelligence/Untitled%2048.png"><img style="width:470px" src="Artificial%20Intelligence/Untitled%2048.png"/></a></figure></details></li></ul><p id="f78d3f19-7d60-4d07-96dc-e4302a3cc211" class="">
+</p><p id="c90e3a7f-9ebc-47b0-91ff-9597926288f5" class="">
+</p><p id="c57c01b4-03af-4f8b-90ca-ab80ce537e3e" class="">
+</p><p id="432f320c-3af5-4f4b-b64b-c5c661d73c56" class="">
+</p><h1 id="a6926c8c-4558-4151-be15-1c7f0ccf30b2" class=""><mark class="highlight-blue">Artificial Neural Networks</mark></h1><p id="b3b49bb8-847b-45bd-bc21-1bc22f52d945" class="">
+</p><ul id="33dc083f-328a-431d-865c-1b344df87d6d" class="toggle"><li><details ><summary>What are the general <mark class="highlight-teal">applications </mark>of Neural Networks? 
+What are neural networks used for ?</summary><ul id="46302070-c83f-48ff-8521-25e34efcdf92" class="bulleted-list"><li>Classification</li></ul><ul id="ff36bf43-1dbc-43a6-8006-d0db0e953105" class="bulleted-list"><li>Regression</li></ul><ul id="53d79aa1-8de8-455b-a20f-e1e0155c4922" class="bulleted-list"><li>Combinatorial optimization</li></ul></details></li></ul><ul id="4ac615a6-95ce-49a8-80ea-ffd125721106" class="toggle"><li><details ><summary>Define <mark class="highlight-teal">2-Class</mark> classification and <mark class="highlight-teal">multi class</mark> decision surface.</summary><p id="7b23ab84-5ead-4c0f-aacc-c66b8d6b649b" class="">
+</p><h2 id="0fd4e07c-7a71-4eeb-a92f-3e7c5a619f10" class="">2-class classifier</h2><figure id="73ded349-e11f-4b1a-b460-e7b4ba132cdb" class="image"><a href="Artificial%20Intelligence/Untitled%2049.png"><img style="width:614px" src="Artificial%20Intelligence/Untitled%2049.png"/></a></figure><p id="ef0ae52e-580e-46a1-a7cc-aad46510d0d4" class="">
+</p><figure id="78abee83-9fce-4cc0-b549-110a2a8ce4c6" class="image"><a href="Artificial%20Intelligence/Untitled%2050.png"><img style="width:223px" src="Artificial%20Intelligence/Untitled%2050.png"/></a></figure><p id="a0e816a5-b5fc-4a22-b916-519f1b0d22ea" class="">
+</p><p id="f1314dd2-c237-400c-a783-952c3e7f3dc0" class="">a general equation for Linear 2-class classifier</p><p id="fee2df8a-35bc-45fa-a703-09b2d75d0d35" class="">
+</p><figure id="42635544-99e9-476d-9e1e-1a7fd0f64667" class="image"><a href="Artificial%20Intelligence/Untitled%2051.png"><img style="width:441px" src="Artificial%20Intelligence/Untitled%2051.png"/></a></figure><p id="c0f4919d-098d-41ed-881c-0fc1eebb3264" class="">
+</p><figure id="1b5cd295-e324-44d0-a224-d4c1c1ce1d4e" class="image"><a href="Artificial%20Intelligence/Untitled%2052.png"><img style="width:528px" src="Artificial%20Intelligence/Untitled%2052.png"/></a></figure><p id="361f054f-f898-447f-a173-189eadc4c216" class="">
+</p><figure id="b7b8e37f-4ee9-4ba4-a128-1e136ad1b3a3" class="image"><a href="Artificial%20Intelligence/Untitled%2053.png"><img style="width:693px" src="Artificial%20Intelligence/Untitled%2053.png"/></a></figure><p id="41521ee9-b0ef-4b59-8bf9-f353acc532a0" class="">
+</p><h2 id="d36c73f1-b760-4093-95f5-44e12aaa5975" class="">Mutli-class classifier</h2><p id="41797689-c3df-4d66-bb58-4664484b8baf" class="">
+</p><figure id="bec862b0-8933-417d-9d1c-171941dfb07f" class="image"><a href="Artificial%20Intelligence/Untitled%2054.png"><img style="width:698px" src="Artificial%20Intelligence/Untitled%2054.png"/></a></figure><p id="ae969bcc-a5e9-459c-b0b5-d1c563da2ad7" class="">
+</p><figure id="8feca07a-a4fd-4421-9d38-5f4a2a5f7b13" class="image"><a href="Artificial%20Intelligence/Untitled%2055.png"><img style="width:417px" src="Artificial%20Intelligence/Untitled%2055.png"/></a></figure><figure id="ecae7e7c-8521-4e0b-a432-6c73176f3699" class="image"><a href="Artificial%20Intelligence/Untitled%2056.png"><img style="width:722px" src="Artificial%20Intelligence/Untitled%2056.png"/></a></figure></details></li></ul><ul id="5afa9ab3-81da-4dad-a19e-e7b3152519ba" class="toggle"><li><details ><summary>How to form a<mark class="highlight-teal"> non-linear classifier</mark>?</summary><p id="13ca2074-12f0-4f8b-8bdc-8d44d8da71e7" class="">
+</p><figure id="183a9bc7-69b2-4b76-9b53-e46e897dd0e5" class="image"><a href="Artificial%20Intelligence/Untitled%2057.png"><img style="width:557px" src="Artificial%20Intelligence/Untitled%2057.png"/></a></figure><p id="388af53e-0015-4701-a4ab-9d477e6b6dfc" class="">
+</p><figure id="f90463eb-e4bc-40a4-a22a-b96a04979abc" class="image"><a href="Artificial%20Intelligence/Untitled%2058.png"><img style="width:712px" src="Artificial%20Intelligence/Untitled%2058.png"/></a></figure><p id="6cc9ff75-5b94-472f-94a1-8e4d2742b379" class="">
+</p><figure id="97799296-5d62-484d-9c60-75e1e0188ee5" class="image"><a href="Artificial%20Intelligence/Untitled%2059.png"><img style="width:701px" src="Artificial%20Intelligence/Untitled%2059.png"/></a></figure></details></li></ul><ul id="b1d10901-8435-4e2f-bbd7-13614fdf8c91" class="toggle"><li><details ><summary>Show the typical <mark class="highlight-teal">neuron structures.</mark></summary><figure id="c0960ef2-5aaa-42e6-b246-f08c41ddacad" class="image"><a href="Artificial%20Intelligence/Untitled%2060.png"><img style="width:582px" src="Artificial%20Intelligence/Untitled%2060.png"/></a></figure><p id="a0ac7903-b10e-46ab-86a8-6e1d49eb7c47" class="">
+</p><figure id="f7eb292e-840e-498f-89a4-32380132da36" class="image"><a href="Artificial%20Intelligence/Untitled%2061.png"><img style="width:670px" src="Artificial%20Intelligence/Untitled%2061.png"/></a></figure></details></li></ul><ul id="85cd7dd2-5243-41bb-bd99-86c941d9e5ed" class="toggle"><li><details ><summary>What are the common <mark class="highlight-teal">activation functions</mark>?</summary><p id="955b66df-78e0-4705-93ce-0e7c2705a487" class="">
+</p><figure id="46fc757c-482c-40a9-a0d9-26cde647be43" class="image"><a href="Artificial%20Intelligence/Untitled%2062.png"><img style="width:401px" src="Artificial%20Intelligence/Untitled%2062.png"/></a></figure><h2 id="403e8939-4bee-4cf0-bdca-2a14de34de27" class="">Bipolar Sigmoidal Function </h2><p id="382050c3-eaef-4150-af41-0c9eea6f9a6a" class="">
+</p><p id="b18303f6-b024-4586-b8e4-d556b247e04e" class="">
+</p><figure id="0a81545a-0219-40c5-acf2-191716acfd8e" class="image"><a href="Artificial%20Intelligence/Untitled%2063.png"><img style="width:687px" src="Artificial%20Intelligence/Untitled%2063.png"/></a></figure><h2 id="f4cd4b3e-01f6-4fca-9515-03653c367010" class="">Unipolar Sigmoidal function</h2><p id="bb1ee61e-64e5-4cc0-8b2c-21d8380b589f" class="">
+</p><figure id="93e15d3f-f727-4094-bc65-b4417eb420bc" class="image"><a href="Artificial%20Intelligence/Untitled%2064.png"><img style="width:670px" src="Artificial%20Intelligence/Untitled%2064.png"/></a></figure><p id="72e1ab82-75b7-4e31-94a6-f4e5c3add938" class="">
+</p><p id="cd6cc15c-68b9-439b-8d0e-ead874c9f9e9" class="">
+</p></details></li></ul><ul id="dfe00b0f-1a11-4aca-9cdc-77367b9e1132" class="toggle"><li><details ><summary>Neural Networks based on a<mark class="highlight-teal"> layered perceptron</mark>, explain.</summary><figure id="ab539720-bb92-44b4-89cd-43a2e1985df1" class="image"><a href="Artificial%20Intelligence/Untitled%2065.png"><img style="width:625px" src="Artificial%20Intelligence/Untitled%2065.png"/></a></figure><figure id="39a09676-1c8c-4180-b10c-6b0cbbdd19a5" class="image"><a href="Artificial%20Intelligence/Untitled%2066.png"><img style="width:655px" src="Artificial%20Intelligence/Untitled%2066.png"/></a></figure><figure id="9b69c40a-9aa4-47f0-be5c-1efff4bd8649" class="image"><a href="Artificial%20Intelligence/Untitled%2067.png"><img style="width:717px" src="Artificial%20Intelligence/Untitled%2067.png"/></a></figure><figure id="8f833431-ae40-4e1d-854b-9a03a5a22199"><div class="source"><a></a></div></figure></details></li></ul><ul id="48a9fa77-c679-4991-a25b-359ea1ae2935" class="toggle"><li><details ><summary>Why do we need <mark class="highlight-teal">bias </mark>?</summary><figure id="b51b19ee-649a-4397-b523-001b0bc58729" class="image"><a href="Artificial%20Intelligence/Untitled%2068.png"><img style="width:1161px" src="Artificial%20Intelligence/Untitled%2068.png"/></a></figure></details></li></ul><ul id="cab71afe-a465-4198-8fae-0351436acb1f" class="toggle"><li><details ><summary>What&#x27;s the<mark class="highlight-teal"> objectives</mark> of neural network ?</summary><p id="d851f49a-654a-4622-9aec-acd9d4439997" class="">compute the weights to obtain the desired decision for the given input patterns</p></details></li></ul><ul id="24df4a77-fc8b-4776-ba91-97c20a015599" class="toggle"><li><details ><summary>What are the NN learning or<mark class="highlight-teal"> training techniques</mark> ?</summary><ul id="7a5e6986-18a9-4890-80d2-71e9e56cf887" class="bulleted-list"><li>Projected gradient descent</li></ul><ul id="c6e9c0dc-67e9-459c-99e4-10e511b473a8" class="bulleted-list"><li>steepest descent (error backpropagation)</li></ul><ul id="05147e3e-7cb6-40ab-b762-30e28469a6f4" class="bulleted-list"><li>Random search</li></ul><ul id="267be6bf-c80b-4660-bf2e-2afbc9f3d8a8" class="bulleted-list"><li>Genetic algorithm</li></ul><ul id="21951575-5d27-4340-8818-7756b423e60c" class="bulleted-list"><li>Particle swarms</li></ul></details></li></ul><ul id="95b4e4ba-18ac-4fe7-b6f0-314a82d05bd4" class="toggle"><li><details ><summary>How do we calculate error and error function in NN ?</summary><figure id="920d7a2f-2da9-462e-ac26-9b1c834b3298" class="image"><a href="Artificial%20Intelligence/Untitled%2069.png"><img style="width:1053px" src="Artificial%20Intelligence/Untitled%2069.png"/></a></figure></details></li></ul><ul id="b4640563-0c9a-454a-9fb8-f2a70ae4a722" class="toggle"><li><details ><summary>Show the steps of backpropagation.</summary><figure id="c34b8e25-88aa-410e-9ab0-f9c6a69b30eb" class="image"><a href="Artificial%20Intelligence/Untitled%2070.png"><img style="width:681px" src="Artificial%20Intelligence/Untitled%2070.png"/></a></figure><figure id="97bca60b-715e-490b-a94a-e6e87f05d774" class="image"><a href="Artificial%20Intelligence/Untitled%2071.png"><img style="width:703px" src="Artificial%20Intelligence/Untitled%2071.png"/></a></figure><figure id="667a562f-6d99-4cac-ad38-1b996a3711ad" class="image"><a href="Artificial%20Intelligence/Untitled%2072.png"><img style="width:519px" src="Artificial%20Intelligence/Untitled%2072.png"/></a></figure><figure id="a9e42cb3-b6dd-482a-a55b-9d602d334377" class="image"><a href="Artificial%20Intelligence/Untitled%2073.png"><img style="width:714px" src="Artificial%20Intelligence/Untitled%2073.png"/></a></figure></details></li></ul><ul id="3d9e6f04-983c-4350-89fd-179da8c31986" class="toggle"><li><details ><summary>What is the difference between <mark class="highlight-teal">supervised </mark>and <mark class="highlight-teal">unsupervised </mark>learning ?</summary><p id="d15cd294-08db-4b04-a600-b5a510e115d6" class="">supervised where we se the error function to modify the weights</p><p id="b29c37d8-7198-4041-95d2-067adec31ba5" class="">unsupervised is where the nn alters its own weights</p><figure id="0df1330c-b97d-4c02-9f8e-5054ee08fd93" class="image"><a href="Artificial%20Intelligence/Untitled%2074.png"><img style="width:635px" src="Artificial%20Intelligence/Untitled%2074.png"/></a></figure></details></li></ul><ul id="c38a7be2-05f6-4cbc-8c3d-b3d15f5e43e1" class="toggle"><li><details ><summary>Show a <mark class="highlight-teal">case </mark>of NN <mark class="highlight-teal">unsupervised </mark>learning.</summary><figure id="81e4435c-6996-4232-9576-471f18b963d7" class="image"><a href="Artificial%20Intelligence/Untitled%2075.png"><img style="width:539px" src="Artificial%20Intelligence/Untitled%2075.png"/></a></figure><figure id="ef2bfe76-c795-4fc4-998a-42a5fe696266" class="image"><a href="Artificial%20Intelligence/Untitled%2076.png"><img style="width:723px" src="Artificial%20Intelligence/Untitled%2076.png"/></a></figure></details></li></ul><p id="eb6a4755-9ce5-4fd5-8668-37b450ea7288" class="">
+</p><p id="e03e8997-bc6c-4f62-97e4-0b4fb19c5de9" class="">
+</p><p id="f69fea74-aa71-4979-aa74-5c6886192779" class="">
+</p><h1 id="ed77c3c8-11f6-410a-9c17-ba5aae88e867" class=""><mark class="highlight-blue">Genetic Algorithm</mark></h1><p id="53d7b989-84e8-4baa-b192-413fbceb24a4" class="">
+</p><ul id="c6e733cb-2797-4ed0-8d73-35c72baa143f" class="toggle"><li><details ><summary>What&#x27;s Genetic Algorithm ?</summary><ul id="d2c471c7-1179-4f02-bbd0-cdf825bb8e1f" class="bulleted-list"><li>a <mark class="highlight-yellow"><strong>search </strong></mark><strong>technique </strong>used in computing to find true or approximate solutions to optimization and search problem.</li></ul><ul id="e8f28fb3-e2cd-414d-bc09-73f785ddb8ea" class="bulleted-list"><li><mark class="highlight-yellow"><strong>global </strong></mark>search heuristics</li></ul><ul id="5d773744-ddaf-47e4-94f3-01392ed6ff5a" class="bulleted-list"><li>class of evolutionary algorithms that use techniques inspired by evolutionary biology such as <strong><mark class="highlight-yellow">inheritance</mark></strong>, <mark class="highlight-teal"><strong>mutation</strong></mark>, <mark class="highlight-teal"><strong>selection</strong></mark>, and <mark class="highlight-teal"><strong>crossover </strong></mark>(recombination)</li></ul><ul id="7337c3f8-13a1-450f-b44b-791ec2b4d6d4" class="bulleted-list"><li><mark class="highlight-yellow"><strong>probabilistic </strong></mark><strong>intelligent search </strong>algorithm, which searches a population of points in parallel.</li></ul></details></li></ul><ul id="0ce73794-6c67-44ac-8fda-3846e3c402c5" class="toggle"><li><details ><summary>In what does GA differ from other optimization techniques ?</summary><p id="03719d7a-57ed-421e-ad6e-6ed4faed9bc8" class="">•	It searches a population of points in <strong><mark class="highlight-yellow">parallel</mark></strong>
+•	It uses <strong><mark class="highlight-yellow">probabilistic </mark></strong>rules rather than deterministic ones
+•	It can process an <strong><mark class="highlight-yellow">encoding </mark></strong>set of parameters</p></details></li></ul><ul id="04856304-6cf8-4073-a5cd-7d25acf3d4d4" class="toggle"><li><details ><summary>Give an overview of the evolution process in GA.</summary><ol id="95d7c037-a8ae-4465-a686-0010d9beb7de" class="numbered-list" start="1"><li>starting from a population of <mark class="highlight-yellow"><strong>randomly </strong></mark>generated individuals</li></ol><ol id="b02874c9-3a58-41a5-a718-cece6ec3511d" class="numbered-list" start="2"><li>then evolution happens in <mark class="highlight-yellow">generations</mark></li></ol><ol id="1b5e20f7-512c-4059-a936-b801bf179e02" class="numbered-list" start="3"><li>In each generation, the <mark class="highlight-yellow">fitness </mark>of every individual in the population is evaluated</li></ol><ol id="0292dd60-01a6-46a6-824c-e7a6b0eb7e51" class="numbered-list" start="4"><li>multiple individuals are <mark class="highlight-yellow">selected </mark>from the current population (based on their fitness)</li></ol><ol id="7dce9453-cd17-4571-8005-41f69c13ae92" class="numbered-list" start="5"><li>the selected individual are <mark class="highlight-yellow">modified </mark>to form a <mark class="highlight-yellow">new </mark>population.</li></ol><ol id="44dc9347-d6fc-4f5f-9551-ea7cd4782cb1" class="numbered-list" start="6"><li>new population is used in the next <mark class="highlight-yellow">iteration </mark>of the algorithm</li></ol><ol id="867bcd2f-0292-4f8e-97a0-6602f48eaddf" class="numbered-list" start="7"><li>To terminate algorithm either 1) a max. number of generations 2) satisfactory fitness level acquired.</li></ol><p id="cef8c9a0-c455-4bc7-be03-c6b5eaf6bf22" class="">
+</p><p id="bfc0453a-01bd-4601-9ff5-9baa6c2753a6" class="">•	Start with a large “population” of randomly generated “attempted solutions” to a problem
+•	Repeatedly do the following:
+	Evaluate each of the attempted solutions
+	(probabilistically) keep a subset of the best solutions
+	Use these solutions to generate a new population
+•	Quit when you have a satisfactory solution (or you run out of time)</p><p id="90d8fa31-2d45-488c-b141-fb1b065d0566" class="">
+</p><p id="ed23f1a9-bd30-45e0-8cba-204b7b01a20d" class="">
+</p></details></li></ul><ul id="1f94ed39-9876-4f3c-b34c-a7b757ecca62" class="toggle"><li><details ><summary>Define, individual, Population and Fitness.</summary><p id="b05c389a-12d2-4ff3-842c-8da99c4ab85c" class="">Population : Group of all individuals Target (search space)</p><p id="a94253cd-3e85-40a6-a4f8-452d16dfba92" class="">Individual : Any possible solution also called chromosome</p><p id="73e78350-554a-4f48-b4bd-17d76062c1ce" class="">Fitness : function that we optimize (each individual has a fitness)</p></details></li></ul><ul id="2b66ea64-9f83-4a57-8b09-5069d1999843" class="toggle"><li><details ><summary>What&#x27;s penalty cost ?</summary><p id="b65d94a9-d5e3-4cc1-bc15-4673173fba63" class="">To initiate the population, a number of individuals are <mark class="highlight-yellow">randomly </mark>formulated in the range of variables
+Each individual in the randomly-created population is tested for violating the <mark class="highlight-yellow">constraints</mark>
+If the solution is <mark class="highlight-yellow">infeasible</mark>, a suitable additional <mark class="highlight-red">penalty cost</mark> is assigned to the individual
+The performance of each individual is evaluated by calculating the value of <mark class="highlight-orange_background"><strong>objective function</strong></mark> and adding the corresponding penalty term if exists</p><p id="bc2358c3-a624-4dbc-a8a4-0f0661c286dc" class="">
+</p><p id="3c8537cb-51de-4dac-b83c-4912a7dcb3f3" class="">
+</p></details></li></ul><ul id="edba2bcf-9837-4d7b-8c1c-870b0ddfc0d3" class="toggle"><li><details ><summary>What&#x27;s individuals fitness value ?</summary><ul id="a3e7d5ca-8422-4e5f-a308-82c1254ee9f4" class="bulleted-list"><li>The individuals are ranked depending on their <mark class="highlight-yellow">corresponding costs</mark> and a suitable <mark class="highlight-red">fitness value</mark> is assigned to each one</li></ul><ul id="e6ba3ec0-e422-4ae1-8690-5094cd88a280" class="bulleted-list"><li>The fitness values could be calculated depending on the <mark class="highlight-yellow">position </mark>of the individuals within the population rather than their distinct <mark class="highlight-yellow">performance</mark></li></ul><ul id="1fa5f9aa-049a-4242-a76f-c77a199ab4c5" class="bulleted-list"><li>Fitness values between maximum and minimum limits are calculated with fixed incremental steps and <mark class="highlight-yellow">assigned </mark>to the ranked individuals</li></ul></details></li></ul><ul id="2dfed86e-80c7-48e9-9731-8a71e23bd679" class="toggle"><li><details ><summary>Use a random population pool to represent the GA steps.</summary><figure id="11781d0b-ec1e-4f51-9796-6840b10f4042" class="image"><a href="Artificial%20Intelligence/Untitled%2077.png"><img style="width:760px" src="Artificial%20Intelligence/Untitled%2077.png"/></a></figure><figure id="4cf88fb8-b649-4661-aca6-08d409adfbce" class="image"><a href="Artificial%20Intelligence/Untitled%2078.png"><img style="width:775px" src="Artificial%20Intelligence/Untitled%2078.png"/></a></figure></details></li></ul><ul id="6c3f40e2-f70d-410b-ab04-7529e93d05a5" class="toggle"><li><details ><summary>What&#x27;s the Constraints representation problem in GA ? and what are the approaches to solve this problem ?</summary><ul id="1df71566-da10-4edd-8787-572bb525b368" class="bulleted-list"><li>To employ GA with a tightly-constrained problem, it is possible to generate only feasible solutions by avoiding individuals which violate the given constraints</li></ul><ul id="933072b4-0fb7-48c6-8c3d-12b69ae6c7df" class="bulleted-list"><li>but, the infeasible solutions mostly cover the search space at the initial generation, so the avoidance will cause missing the area of global minimum</li></ul><p id="88f3b0e4-5e01-4078-9c27-1728fe5bb0a9" class=""><mark class="highlight-teal"><strong>Approaches</strong></mark>,</p><ol id="c36b3eb6-6fae-4f4a-b15e-b5a27b8196b0" class="numbered-list" start="1"><li>Move the infeasible individuals to the nearest feasible area,<ul id="1127b685-58af-4bc0-be88-e58759ee2d65" class="bulleted-list"><li>but this would be too complex and a very time consuming</li></ul></li></ol><ol id="2b01a326-2f5f-4a87-862d-f1463ce56177" class="numbered-list" start="2"><li>Penalty function convert to an unconstrained problem by augmenting additional cost terms with the main objective function</li></ol><ul id="8df4a320-1b6c-488b-b0ba-c1d58a9045d9" class="bulleted-list"><li> nonlinear costs for solutions that violate the constraints depending on their relative locations with respect to the feasibility boundaries</li></ul><ul id="13e741e8-0966-41f0-bf29-595f4df1dfd2" class="bulleted-list"><li>ensure adequate choice of the penalty functions and their parameters for rapid rejection</li></ul><ul id="3a3b4538-aaf4-4add-b8fa-19403f73fef4" class="bulleted-list"><li>differentiate in performance between the infeasible individuals themselves, which will help in the evolution process</li></ul><ul id="084cd327-fe3c-4e9b-b0d5-2974b5d80bd6" class="bulleted-list"><li>higher cost value has to be assigned to any infeasible solution than the feasible members, for fast rejection</li></ul><p id="5908feb7-c94f-46bf-b689-92b18342338e" class="">
+</p></details></li></ul><ul id="5a9b6f0c-9d59-4677-9547-941c068986d1" class="toggle"><li><details ><summary>Draw a flowchart defining the GA search algorithm.</summary><figure id="8b47937d-b1bd-4225-a180-7cc8e733e91a" class="image"><a href="Artificial%20Intelligence/Untitled%2079.png"><img style="width:723px" src="Artificial%20Intelligence/Untitled%2079.png"/></a></figure></details></li></ul><ul id="33868d06-4854-45b2-b7b3-1365979b0aac" class="toggle"><li><details ><summary>What&#x27;s crossover?</summary><p id="034f00b3-8e90-4193-b9ef-1a93726c4a45" class="">Crossover is a genetic process to exchange information between members of the population.</p><p id="aa460398-8933-49e9-957e-7c3405479f0a" class="">It&#x27;s the generation of new individuals of the next generation by mating parents by choosing a crossover point </p><p id="c8ed4c36-3114-4ced-bcfa-902caf59a968" class="">
+</p><figure id="41013eb4-df61-472c-9707-b370ab5b8c63" class="image"><a href="Artificial%20Intelligence/Untitled%2080.png"><img style="width:722px" src="Artificial%20Intelligence/Untitled%2080.png"/></a></figure><p id="2ac404c2-06bf-42ca-8f3e-49d964764654" class="">or can be a two point cross over to mate the middle part genes, avoiding genes at the beginning and end of chromosome</p><figure id="7db3b0a7-dd30-4a94-91b4-673599b63a86" class="image"><a href="Artificial%20Intelligence/Untitled%2081.png"><img style="width:684px" src="Artificial%20Intelligence/Untitled%2081.png"/></a></figure><p id="a8e2c18f-9a1a-4be4-a900-abe3f5d1efc1" class="">or can be by choosing random subset from one parent and replacing it from the another parent.</p><p id="44eebbbd-b27e-4d6c-9d52-2ca8dec507b8" class="">
+</p><figure id="e62eda9a-c6ef-4804-8ca3-dccd0abbf031" class="image"><a href="Artificial%20Intelligence/Untitled%2082.png"><img style="width:632px" src="Artificial%20Intelligence/Untitled%2082.png"/></a></figure><p id="42cc5e72-17b2-43fe-9669-a554d0133412" class="">
+</p></details></li></ul><ul id="84c6e64c-1b74-4e21-9fee-cd6eb11ce862" class="toggle"><li><details ><summary>What&#x27;s Mutation?</summary><p id="5a741fed-2b5e-4cdd-8ac7-99270b3d2a7a" class="">it&#x27;s small disruptive change in the new generation members</p><figure id="2ab40b98-6fe5-411d-a304-f0a1ef0247cd" class="image"><a href="Artificial%20Intelligence/Untitled%2083.png"><img style="width:457px" src="Artificial%20Intelligence/Untitled%2083.png"/></a></figure></details></li></ul><ul id="bee14eb2-f21d-47c7-afc9-fd566ae6e40e" class="toggle"><li><details ><summary>Suppose we want to maximize the number of ones in a string of (L) binary digits
+An individual is encoded (naturally) as a string of l binary digits
+The fitness (f) of a candidate solution is the number of ones in its genetic code</summary><p id="f18ebfb0-47e2-47e7-bc34-fbbe52444ad4" class="">
+</p><p id="25b06347-3219-4b5f-b079-640df33ff744" class="">We start with a population of “n” random strings. Suppose that L= 10 and n= 6</p><p id="9a525011-84e7-4bc4-a63e-75a33782a095" class="">
+</p><ol id="f7d6c661-9b39-4ee2-a3e6-dc872ce7f41a" class="numbered-list" start="1"><li>We toss a fair coin 60 times and get the following initial population:</li></ol><figure id="3c3fd884-62be-48d5-ab33-29a099bd89e3" class="image"><a href="Artificial%20Intelligence/Untitled%2084.png"><img style="width:394px" src="Artificial%20Intelligence/Untitled%2084.png"/></a></figure><p id="9f5cfc29-7f09-4c57-9008-91d67d0559d9" class="">2. We randomly select a subset of the individuals based on their fitness according to</p><figure id="52c9b3f5-9841-4710-9694-42a40ee67439" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>i</mi><mi>e</mi><mtext> </mtext><mi>S</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>=</mo><mfrac><mrow><mi>f</mi><mo>(</mo><mi>i</mi><mo>)</mo></mrow><mrow><munderover><mo>∑</mo><mi>i</mi><mi>n</mi></munderover><mrow><mi>f</mi><mo>(</mo><mi>i</mi><mo>)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">Pie \ Section = \frac{f(i)}{\sum_{i}^{n}{f(i)}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">i</span><span class="mord mathdefault">e</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">e</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.421002em;vertical-align:-0.994002em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.305708em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mclose">)</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.994002em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="189e189f-47b2-40a7-ad12-ebe7db95af04" class="">
+</p><figure id="042f6e77-5c20-474f-9c0a-ab25dba730ae" class="image"><a href="Artificial%20Intelligence/Untitled%2085.png"><img style="width:386px" src="Artificial%20Intelligence/Untitled%2085.png"/></a></figure><p id="c0aa4c0c-e4bc-499c-93a1-18f432eafff2" class="">
+</p><p id="b2018520-ad53-4dff-9b0a-92809a8e0409" class="">3. Suppose that, after performing selection, we get the following population::</p><p id="fb699b82-511c-462d-8e42-902d558e9aa8" class="">
+</p><figure id="8be3a66a-bd52-40ac-8549-036425f32a80" class="image"><a href="Artificial%20Intelligence/Untitled%2086.png"><img style="width:326px" src="Artificial%20Intelligence/Untitled%2086.png"/></a></figure><p id="3955af66-4d80-40c2-a330-53026fbf9206" class="">4. we choose 0.6 of the 6 chosen to perform crossover, choose random two point cross over</p><p id="21a2f5c5-5fe9-4d03-a402-856fe03f77e6" class="">
+</p><figure id="13bba258-0c66-4e94-86ff-6beaa5132da0" class="image"><a href="Artificial%20Intelligence/Untitled%2087.png"><img style="width:779px" src="Artificial%20Intelligence/Untitled%2087.png"/></a></figure><p id="a3ed4c61-a9a3-4107-b9ca-a984846a3c3f" class="">
+</p><p id="0cede9d5-5d2c-4e92-aaea-846a7ea0e850" class="">5. after crossover we get new 0.6*6 = 4 individuals (initial strings in the next photo) </p><p id="2b054ca2-5915-4df1-85e2-2453538c2588" class="">6. these 4 new individuals we allow for 0.1 mutation (one bit) </p><p id="0314bae9-c42f-461a-be5a-473168607dd1" class="">
+</p><figure id="ad9ba06a-987f-430d-8c4d-74da3e756ee9" class="image"><a href="Artificial%20Intelligence/Untitled%2088.png"><img style="width:693px" src="Artificial%20Intelligence/Untitled%2088.png"/></a></figure><p id="286af9cd-2f2c-40bc-a2fd-93202f9def23" class="">
+</p><p id="e7608f39-e1a5-421d-9830-303792ac460e" class="">And now, iterate …
+In one generation, the total population fitness changed from 34 to 37, thus improved by ~9%
+At this point, we go through the same process all over again, until a stopping criterion is met</p><p id="fb8ff03f-9387-4eaf-9bbb-f2baa4e05032" class="">
+</p></details></li></ul><ul id="f4163fd3-b762-4ccd-9271-6a913eaafa85" class="toggle"><li><details ><summary>What are <mark class="highlight-teal">selection </mark>methods in GA?</summary><ol id="9f26c524-62a6-4d4c-a347-53b2b2eb5013" class="numbered-list" start="1"><li>Roulette wheel (one pointer)</li></ol><figure id="50c8218f-eea4-442f-9068-02130b38ce2c" class="image"><a href="Artificial%20Intelligence/Untitled%2085.png"><img style="width:386px" src="Artificial%20Intelligence/Untitled%2085.png"/></a></figure><p id="e8aeae7c-5013-46e5-80f0-514c04bb0329" class="">you will need N rolls to get N solutions</p><p id="23f02ad4-7826-442d-a582-617d19968d28" class="">2. N equally space pointers </p><figure id="72141e6a-8794-45b2-bf7b-7ca994f75d87" class="image"><a href="Artificial%20Intelligence/Untitled%2089.png"><img style="width:422px" src="Artificial%20Intelligence/Untitled%2089.png"/></a></figure><p id="9c890c7a-53a0-4944-b279-dd7889b5cf93" class="">one roll will give you N solution</p><p id="c4ee26d8-d4ca-46c9-954f-6cd8856416b8" class="">
+</p><p id="d91f4043-2d8c-47ba-8bab-f1ea9ae81924" class="">
+</p></details></li></ul><ul id="bb40187a-4e3e-458f-9d15-f06f46b70b31" class="toggle"><li><details ><summary>How to do recombination in non-binary chromosomes ?</summary><h3 id="be3bcffb-cd0f-400a-a1dd-1898deaf5a3d" class="">Crossover</h3><p id="36d65f83-8e67-48de-815f-8ba892d43098" class="">Crossover is a genetic process to exchange information between members of the population.</p><p id="dc16de9b-fc13-49f6-8ccb-5322c6edc995" class="">For the real-valued encoding, the max-min arithmetical crossover operator can be used as follows</p><p id="80b17058-c76b-4438-a9a8-ff5399cd0e33" class="">
+</p><figure id="9a440062-17fe-4345-9176-2ff61f033338" class="image"><a href="Artificial%20Intelligence/Untitled%2090.png"><img style="width:735px" src="Artificial%20Intelligence/Untitled%2090.png"/></a></figure><p id="57156034-f478-45b0-8c27-d6b04410c639" class="">
+</p><h3 id="c075c38c-bf82-487d-a5b1-c1b38a7c1778" class="">Mutation</h3><p id="9904ae87-ec05-4f26-8765-1e573f06b3b8" class="">It is the second process in the recombination, which is used to escape from possible local minima.
+The mutation in the real-coded representations is accomplished by <mark class="highlight-yellow">disturbing </mark>the <em>gene values with low probability</em>.</p><p id="b66f065a-2661-419c-a157-a35889ca2b2e" class="">
+</p></details></li></ul><ul id="1f39a729-b58a-46c5-9c39-ee8bd877d720" class="toggle"><li><details ><summary>What&#x27;s Elitism?</summary><ul id="cc4b39a3-f756-40c5-be43-445e70b88981" class="bulleted-list"><li>to ensure that the best solutions are not lost in moving from one generation to the next.</li></ul><ul id="2394d177-4dbc-4b77-9c49-0b6107c73d76" class="bulleted-list"><li>some of the <mark class="highlight-yellow">fittest members </mark>of each generation are <mark class="highlight-yellow">saved </mark>and copied into the next generation.</li></ul><ul id="f90d4f76-56a1-4604-8167-5eec70c8e2c7" class="bulleted-list"><li>the average fitness of the new generation is improved.</li></ul></details></li></ul><ul id="0cef6112-2120-458b-ba38-b51c813b94a0" class="toggle"><li><details ><summary>Give a numerical example of a GA problem parameters</summary><h3 id="827161df-248f-4aff-9ee7-7f2369a5b024" class="">Number of individuals per subpopulation  (20)</h3><p id="98fdb432-f740-4264-a6f5-5b4fe2c1ae65" class=""><em>for migration purposes.</em></p><h3 id="f81cef6f-c6e9-4bad-85cf-4fac756c3b2d" class="">Total population size                                   (200)</h3><p id="6746c980-45e2-4837-b9ba-da3a97e1b2b3" class=""><em>the number of individuals </em></p><h3 id="805a3cd1-29cc-4c5d-8988-17fd855fdbdb" class="">Generation gap                                           (0.8)</h3><p id="0471f9e2-699c-49f5-944b-fb02423bf19d" class=""><em>number of individuals recombination are made on</em></p><h3 id="c0ba5f04-abc2-4608-9b87-f515744f0710" class="">Insertion rate                                              (0.9)</h3><p id="60cee164-2721-41b8-bb55-44bb3794aafc" class=""><em>that 0.9 of the new generation will replace the worst same number of individuals in the old generation</em></p><h3 id="38ecc4f0-702c-4fe7-ba70-884a6668adba" class="">Probability of mutation                             (0.01)</h3><p id="738bbc7a-1b3e-49f4-a6dd-06026a26fae5" class=""><em>how much of the genes will be mutated</em></p><h3 id="b4053804-3c33-46ba-9df9-4cdf76f9df68" class="">Maximum generations                              (1000)</h3><p id="2e9de0d9-171c-4714-9c48-39697ac66192" class=""><em>the number of generation at which the algorithm terminates</em></p></details></li></ul><ul id="d7bb9119-dacd-4316-93bc-47f283984ae7" class="toggle"><li><details ><summary>We want to construct a box whose base length is 3 times the base width. The material used to build the top and bottom cost $10/ft2 and the material used to build the sides cost $6/ft2. If the box must have a volume of 50ft3 determine the dimensions that will minimize the cost to build the box</summary><p id="22414b36-adcf-401d-9c61-4e4d61b43947" class="">
+</p><figure id="afc18579-08b1-4388-8891-d5637b734ef3" class="image"><a href="Artificial%20Intelligence/Untitled%2091.png"><img style="width:798px" src="Artificial%20Intelligence/Untitled%2091.png"/></a></figure><p id="2acc9fbc-56e7-4b86-a469-d51c5b2b2667" class="">
+</p><figure id="fbf13551-52e3-4f49-9fd8-7e6bfebd4ec1" class="image"><a href="Artificial%20Intelligence/Untitled%2092.png"><img style="width:792px" src="Artificial%20Intelligence/Untitled%2092.png"/></a></figure><p id="639015ff-b602-40cf-8a49-7efa9eedf292" class="">
+</p></details></li></ul><p id="11ae31e9-6998-4778-8b2b-eddcd6c59501" class="">
+</p></div></article></body></html>
