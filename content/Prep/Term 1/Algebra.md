@@ -34,7 +34,7 @@ weight : 4
 
 |  | |
 |---:|----------------------|
-| {{% button href="/Prep/files/Matrices-Function-Algebra-Prof.Shaf'i-min.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر - المصفوفات - م الشافعي|
+| {{% button href="/Prep/files/Algebra-Future-Matrices.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر - المصفوفات - م الشافعي|
 | {{% button href="/Prep/files/Algebra-Future-Partial_Fractions.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر - الكسور الجزيئية - م الشافعي|
 | {{% button href="/Prep/files/Algebra-Future-BionomialTheorem.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- ذات الحدين - م الشافعي|
 | {{% button href="/Prep/files/Algebra-Future-BinomialTheorem2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | سنتر فيوتشر- ذات الحدين 2 - م الشافعي|
