@@ -33,6 +33,8 @@ weight : 3
 
 |  | |
 |---:|----------------------|
+| {{% button href="/Prep/files/Mtr-Future-Gravity2-min.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الجاذبية الجزء 2 - سنتر فيوتشر - م عاصم    |
+| {{% button href="/Prep/files/Mtr-Future-Gravity1-min.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | الجاذبية الجزء 1 - سنتر فيوتشر - م عاصم    |
 | {{% button href="/Prep/files/Mtr-Future-Elasticity-min.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | المرونة - سنتر فيوتشر - م عاصم    |
 | {{% button href="/Prep/files/Mtr-Future-Elasticity-Sheet-min.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | شييت المرونة - سنتر فيوتشر - م عاصم    |
 | {{% button href="/Prep/files/Mtr-Future-Viscosity.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | اللزوجة - سنتر فيوتشر - م عاصم    |
