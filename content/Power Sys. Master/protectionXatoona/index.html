@@ -1,0 +1,642 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Digital Protection </title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="056859aa-f6ca-4c0c-aaaf-721ae563cb13" class="page sans"><header><h1 class="page-title">Digital Protection </h1></header><div class="page-body"><p id="c60a47ea-d400-4019-95a5-4d4e75db0fce" class="">
+</p><p id="edab8eab-ee27-4fce-9463-77429cde6c6d" class="">
+</p><ul id="eadeef27-6e97-4f73-938d-54e9092daab1" class="bulleted-list"><li>Lec1 : introduction to protection </li></ul><ul id="c1558ae9-553c-4ccf-bcfe-313f4540001d" class="bulleted-list"><li>Lec2 : introduction to digital protection </li></ul><ul id="7fbef3d0-3fce-4414-908e-d9cec3f8cb10" class="bulleted-list"><li>Lec3 : DSP (recurrsive and non recurrdive  )</li></ul><ul id="e6f53964-c275-4828-bfb6-d7b087786191" class="bulleted-list"><li>Lec4 : DFT </li></ul><ul id="1876a080-adbd-40c4-94c2-dc33f7d5418f" class="bulleted-list"><li>Lec5 : Wavelet</li></ul><p id="b784b5a1-cd46-4272-be94-e78dbda01d06" class="">
+</p><p id="1de32f12-22d9-437f-a233-e8bdbac54390" class="">
+</p><h1 id="5a4fe4e2-26bd-429b-82c9-f488711eb4d1" class=""><mark class="highlight-blue">Lecture 1 : Introduction to Protection</mark></h1><hr id="098a5699-4898-4686-8580-6e076e6b7acd"/><ul id="b83d705f-5982-44d0-86da-da970fbfeac6" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What is Relaying ?</strong></mark></summary><p id="8b600981-6d0e-437f-b700-e0f9c24577a0" class=""><strong>Relaying </strong>is the branch of electric power engineering concerned with the principles of design and operation of relay that detects abnormal power system conditions, and initiates corrective action as quickly as possible (few ms) in order to return power system to its normal state.</p></details></li></ul><ul id="f9ba876c-41dd-42d9-a321-9a7ffb591128" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>Mention the elements of a protection system.</strong></mark></summary><p id="e589dfff-84d5-4352-b592-b6d0bd935bfe" class="">1- Transducer</p><p id="9ec8688b-a902-48fb-8568-b778edc76de0" class="">2- Relay</p><p id="6c85471e-a6d5-4875-9bd6-8fb1ef2ec17a" class="">3- Circuit Breaker</p><p id="1b57d24c-0b0f-4dd9-b7b8-e228596cfcf5" class="">4- Battery</p><figure id="fe120516-4b97-41f3-a78f-78856610b959" class="image"><a href="Digital%20Protection/Untitled.png"><img style="width:747px" src="Digital%20Protection/Untitled.png"/></a></figure></details></li></ul><ul id="acc9359d-e2e9-4622-a1e1-ef0043080265" class="toggle"><li><details ><summary><strong><mark class="highlight-red">What are the differences between dead tank and live tank CBs ?</mark></strong></summary><p id="f83867fb-44da-41d5-be22-ec3cd164dd82" class="">Live Tank</p><p id="0ffa3f7d-ffa8-48e4-ac78-77c9618aaede" class="">SF6 CB</p><div id="52ade314-e6e3-44f6-9ec4-7736d2823c70" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th>n</th><th>Live Tank</th><th>Dead Tank</th></tr></thead><tbody><tr id="92ca694a-641c-4e46-adae-5a9b6f3b79f0"><td class="cell-title"><a href="https://www.notion.so/92ca694a641c4e46adae5a9b6f3b79f0">Untitled</a></td><td class="cell-5kn^">SF6 CB</td><td class="cell-|WZX">Oil CB
+</td></tr><tr id="8082a3f7-b596-4bb5-9b40-cf47c332e01c"><td class="cell-title"><a href="https://www.notion.so/8082a3f7b5964bb59b40cf47c332e01c">Untitled</a></td><td class="cell-5kn^">not bounded to grounding</td><td class="cell-|WZX">bonded to grounding
+</td></tr><tr id="7eabca77-c85b-4092-853d-300bac0613f7"><td class="cell-title"><a href="https://www.notion.so/7eabca77c85b4092853d300bac0613f7">Untitled</a></td><td class="cell-5kn^">CT are in one side of CB</td><td class="cell-|WZX">CTs can be on both sides
+</td></tr><tr id="646f3523-6c67-4c74-8b45-36915c1db9dc"><td class="cell-title"><a href="https://www.notion.so/646f35236c674c748b4536915c1db9dc">Untitled</a></td><td class="cell-5kn^">CTs are stand alone</td><td class="cell-|WZX">CTs attached with CB bushings
+</td></tr><tr id="78a8f224-35ff-4fd9-93a2-4d84de0e9504"><td class="cell-title"><a href="https://www.notion.so/78a8f22435ff4fd993a24d84de0e9504">Untitled</a></td><td class="cell-5kn^"></td><td class="cell-|WZX"></td></tr></tbody></table></div><p id="c88a7924-bc3a-4171-a5b4-a5be267ec8a2" class="">
+</p><p id="d8eddb90-4705-4d30-ae90-784e0e1634cd" class="">
+</p></details></li></ul><ul id="0b889757-94a7-4d84-bb91-2d459dd96960" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>Define : Reliability, Selectivity, Speed of Operation, Simplicity and Economics.
+What are the basic objectives of system protection.</strong></mark></summary><p id="303994b4-3f62-4d5e-a281-5013b7f19c43" class=""><strong>Reliability :</strong> Assurance that the protection will perform correctly<div class="indented"><p id="c83cc5a7-bf8b-44d7-a7a6-409568b068ff" class=""><em>Dependability :</em> operate correctly for all the faults for which they are designed to operate</p><p id="c6a51938-376d-4a53-9104-b00e18365598" class=""><em>Security:</em>  will not operate incorrectly for any fault.</p></div></p><p id="b187181b-754a-4c67-b2eb-f24ccb0f24a4" class=""><strong>Selectivity: </strong>Maximum continuity of service with minimum system disconnection</p><p id="a4009659-383a-4225-b7fc-4fdaa3b3f2d5" class=""><strong>Speed of Operation :</strong> Minimum fault duration and consequent equipment damage and system instability<div class="indented"><p id="33661a42-4db7-4374-998d-6f00192413d2" class=""><em>Instantaneous :</em> operate as soon as a secure decision is made. No intentional time delay.</p><p id="2b0f1cc9-3758-4bd2-b09d-e3d7cb85baa7" class=""><em>Time Delay :</em> An intentional time delay inserted</p></div></p><p id="a6af3a69-9ddd-437b-9694-46ce0430ca12" class=""><strong>Simplicity :</strong>Minimum protective equipment and associated circuitry to achieve the protection objectives.<div class="indented"><p id="de0ebde5-275b-4dc6-ab18-6c6b1e91af26" class="">duplicate, backup or breaker-failure protection systems.</p></div></p><p id="a45fbcfd-5731-4127-814d-2a9afcfd4b6d" class=""><strong>Economics: </strong>Maximum protection at minimal total cost</p></details></li></ul><ul id="196cb079-1198-46ef-a7ad-029379baca51" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>How to judge relaying performance?</strong></mark></summary><p id="03657dc6-e1d4-44eb-b85a-5df541e8c804" class=""><mark class="highlight-teal"><strong>Correct : (99% of operations are correct)</strong></mark></p><ul id="1bd70cc3-d54a-4ec4-a108-ac85d96c3950" class="bulleted-list"><li>At least one of the primary relays operated correctly.</li></ul><ul id="228128da-9a00-436e-88b9-18f7cd060103" class="bulleted-list"><li>None of the backup relays operated</li></ul><ul id="7f3164c2-ae07-43ba-8021-e0a0d31373fe" class="bulleted-list"><li>fault isolated in the time expected.</li></ul><p id="e3ba26b0-e39d-4546-bc1c-e7b16e53775b" class=""><mark class="highlight-red">Incorrect (due to)</mark></p><ul id="2530b687-0524-4dca-a398-332829425f37" class="bulleted-list"><li>misapplication of relays</li></ul><ul id="c4fd771c-83fa-457c-b8ec-4aea015f1df9" class="bulleted-list"><li>incorrect setting</li></ul><ul id="3be14050-5989-4a7b-8384-94e834b06620" class="bulleted-list"><li>personnel errors</li></ul><ul id="84eff941-3640-460d-a02a-3d7bd229ffb6" class="bulleted-list"><li>equipment problems or failures
+(relays, breakers, CTs, VTs, station battery, wiring, pilot channel, auxiliaries, and so on).</li></ul><p id="bceb3065-cd1c-48da-b287-3860fbddec21" class=""><mark class="highlight-blue">No Conclusion :</mark><div class="indented"><p id="2e3a41c5-60c5-4909-92fd-e19bf7b34fd0" class="">one or more relays have or appear to have operated, but no cause can be found. No evidence of a power system fault</p></div></p></details></li></ul><p id="8662f485-9eff-4823-b7be-5cd473104380" class="">
+</p><ul id="5b38b431-5916-4937-81ff-866553c1fd00" class="toggle"><li><details ><summary><strong><mark class="highlight-red">What ate the methods of fault detection ?</mark></strong></summary><ul id="6df0a74b-4088-4607-a54d-613853b54b84" class="toggle"><li><details ><summary>Level detection</summary></details></li></ul><ul id="6d733b0e-0683-4d59-b4d4-0d3a99973110" class="toggle"><li><details ><summary>Current in abnormal path</summary></details></li></ul><ul id="8944b1a0-6680-4626-a59c-523104f82763" class="toggle"><li><details ><summary>Current balance</summary></details></li></ul><ul id="9b21facf-2620-4179-8c02-c8d209c899bb" class="toggle"><li><details ><summary>Phase angle comparison (directional relay)</summary></details></li></ul><ul id="3073105b-6d69-4dd3-9cd3-d45a0b6b2186" class="toggle"><li><details ><summary>Change of parameters(distance relay)</summary></details></li></ul><ul id="debcb8ba-a1ff-408e-ba05-cd82744382b0" class="toggle"><li><details ><summary>harmonic content</summary></details></li></ul><ul id="e8d85b16-4e51-49a3-9da6-45bc6d235d01" class="toggle"><li><details ><summary>frequency sensing</summary></details></li></ul><ul id="ee607f08-3ce3-4445-ae52-578b4e41de89" class="toggle"><li><details ><summary>Buchholz relay</summary></details></li></ul><ul id="f2b316f9-bc3e-4e0f-b422-4becc52bf609" class="toggle"><li><details ><summary>Non-electrical quantities</summary></details></li></ul><p id="758ac926-93cc-4cb0-b5fb-a89abf3579c0" class="">
+</p></details></li></ul><ul id="e4c5f8b9-bc5e-4382-a0c2-89bfa72edd41" class="toggle"><li><details ><summary><strong><mark class="highlight-red">What are relay design types?</mark></strong></summary><ol id="deced88b-7a4e-4fbf-ba4c-ac773c912ed3" class="numbered-list" start="1"><li><mark class="highlight-orange">Electromechanical relays</mark><ol id="42e43fa7-f88a-4c81-8092-284f14b5f455" class="numbered-list" start="1"><li>Magnetic Attraction<ol id="d10b3dc5-646a-42dc-9fff-c5f7c2523e18" class="numbered-list" start="1"><li>Plunger (solenoid)</li></ol><ol id="811a643f-9949-4421-a723-50d9a8e7664c" class="numbered-list" start="2"><li>attracted armature </li></ol><ol id="1dfe3122-2404-4486-9c10-0c64332aecf6" class="numbered-list" start="3"><li>balanced beam</li></ol></li></ol><ol id="c04b1a0a-7568-460f-9868-311b11d189f5" class="numbered-list" start="2"><li>Magnetic Induction<ol id="db4d745f-bcdf-4f21-a3f7-bbe20ab0c1df" class="numbered-list" start="1"><li>induction disk</li></ol><ol id="225db8da-461b-4394-b5aa-ca3dd84dca6e" class="numbered-list" start="2"><li>induction cup</li></ol></li></ol></li></ol><ol id="b16bdace-4d61-4e06-a009-9c995335aee8" class="numbered-list" start="2"><li><mark class="highlight-orange">Solid-State relays</mark></li></ol><figure id="eb4bec1f-ff33-4119-8cd3-99d25fa28ff9" class="image"><a href="Digital%20Protection/Untitled%201.png"><img style="width:780px" src="Digital%20Protection/Untitled%201.png"/></a></figure><p id="9d5aaef2-0361-4110-915d-f811daa065e6" class="">3.   <mark class="highlight-orange">Computer relays</mark></p><p id="929c8e0f-a444-4d42-8eac-08eec9097402" class="">
+</p><p id="39e24815-6bb5-4aa4-9486-2c379c6b5405" class="">
+</p><p id="6c3723db-f3f6-4f74-9585-790e291c90b9" class="">
+</p></details></li></ul><p id="7fc84c35-2fda-4f8b-8901-f7af64dab347" class="">
+</p><h2 id="23891856-bd55-4ba5-820f-c96c0f4318a4" class=""><mark class="highlight-brown">Current and Voltage Transformers (Lec 2)</mark></h2><h2 id="32d7f4eb-99c4-4e78-9696-65339a564adc" class=""><mark class="highlight-brown">Nonpilot overcurrent Protection of TLs</mark></h2><h2 id="5b1b8e38-1ade-4cdd-9e24-20fd09f88203" class=""><mark class="highlight-brown">Directional current relays</mark></h2><h1 id="fa52361f-5bfa-4508-903c-b160ac03e1e8" class=""><mark class="highlight-blue">Lecture 2 : Microprocessor-based relays</mark></h1><hr id="2939d583-fb24-48e0-b69c-0ab2ef3933fb"/><p id="3b0b27ea-a0b6-4ee8-af73-ec4ed0c90265" class="">
+</p><ul id="aca6672b-1939-49cf-abd7-325e74e7bb7f" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What are microprocessor relays ? </strong></mark></summary><p id="6546e259-1c48-4081-bc56-ef52f7959b54" class="">They are relays that utilize software based numerical measuring techniques.</p></details></li></ul><ul id="3198b2ee-e576-4b5d-999a-b4b90c199fd4" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What are the benefits of μp-based relays?</strong></mark></summary><ul id="da7fdc87-d080-4a56-9319-723a70ee124f" class="toggle"><li><details ><summary>Multiple functions</summary><ul id="9c72edf6-bd7e-45dc-9233-46e97c00944c" class="bulleted-list"><li>multiple setting groups</li></ul><ul id="ad126269-00a5-4bf4-8154-3ce16d218811" class="bulleted-list"><li><mark class="highlight-orange">programmable </mark>logic</li></ul><ul id="842b8e8e-9a00-4693-9a3f-2083743658d1" class="bulleted-list"><li><mark class="highlight-orange">adaptive </mark>logic </li></ul><ul id="f1156dd7-ca78-4c63-9fb7-385d95458dab" class="bulleted-list"><li>self-<mark class="highlight-orange">monitoring</mark></li></ul><ul id="e31e112d-f2d7-4bab-ad30-c2b5f9bba087" class="bulleted-list"><li>self-<mark class="highlight-orange">testing</mark></li></ul><ul id="0e3dcfa2-af19-49ce-ab7c-6173d037eb9e" class="bulleted-list"><li>sequence of events <mark class="highlight-orange">recording</mark></li></ul><ul id="2d500be8-7c96-43e9-b470-44f2227c9ebf" class="bulleted-list"><li><mark class="highlight-orange">oscillography</mark></li></ul><ul id="6c754d34-e627-4222-88e3-8dddcb4436ce" class="bulleted-list"><li>ability to <mark class="highlight-orange">communicate </mark>with other relays and control computers</li></ul></details></li></ul><ul id="c02f5447-a5ae-4923-a63b-4aa5bc6a5c93" class="toggle"><li><details ><summary>Cost</summary><p id="545717af-7323-47c6-a416-dc7b1ac2bf0d" class="">They depend on commercially available components</p></details></li></ul><ul id="f58cb4a5-3244-4be6-9a2a-4ffe70758769" class="toggle"><li><details ><summary>custom logic schemes</summary><ul id="2aa099df-aa1e-4e4d-9768-259c9b5187af" class="bulleted-list"><li>allow users to develop their own logic schemes</li></ul></details></li></ul><ul id="2ed4c749-bd24-4bc0-beb5-a09d37614c0f" class="toggle"><li><details ><summary>panel space</summary><ul id="02fc0ab5-ec93-464d-803e-ec48f026c3fc" class="bulleted-list"><li>required much less space for the hardware integration</li></ul><ul id="d09e2f06-63b1-41ef-9d0a-757d5fcec240" class="bulleted-list"><li>and the multiple functionality of one device</li></ul></details></li></ul><ul id="5cf64eb0-2343-4e8d-8b6c-152855cf62d3" class="toggle"><li><details ><summary>burden on instrument transformers</summary><ul id="b9ef78f4-6672-4f88-be68-1a1f8edcb308" class="bulleted-list"><li>have less burden on CT and VT</li></ul><ul id="844caa0a-da3e-40e7-ada6-ea23331e2365" class="bulleted-list"><li>can detect CT saturation </li></ul><ul id="311885b3-15df-4343-8059-d4536e17ed17" class="bulleted-list"><li>require fewer CT or VT (as zero seq. current can be derived numerically)</li></ul></details></li></ul><ul id="01f2a2f1-c8d6-419e-9763-3a940aa6295b" class="toggle"><li><details ><summary>sequence of events and oscillography</summary><p id="93054ff6-ffbc-413f-959f-9d165bb56d1a" class="">to analyze the performance of relays and system disturbances</p></details></li></ul><ul id="fc11a74b-a073-4d77-a155-8ed4aa8ccf8f" class="toggle"><li><details ><summary>self-monitoring and self-testing</summary><p id="a5f90915-ed3b-4f16-b1c0-50e33a1e3dd4" class="">
+</p></details></li></ul></details></li></ul><ul id="089c1283-949c-475b-bf7b-3cef838a5309" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What are the shortcomings of μp-based relays?</strong></mark></summary><ul id="70f307c6-df33-4bfd-8dfe-5e74759b1e65" class="toggle"><li><details ><summary>short life cycle</summary><p id="61c61b4e-2df6-4834-89dd-e5187ae5e692" class="">because every generation has better functionality that the previous</p></details></li></ul><ul id="5f329067-f894-488d-9027-58b40c4c0496" class="toggle"><li><details ><summary>susceptibility to transients</summary></details></li></ul><ul id="a3741297-c642-4d16-9162-de9ec2efdd7b" class="toggle"><li><details ><summary>setting and testing complexity</summary><p id="58db6fa0-bc84-4d53-b2a4-302e9a8ac8f4" class="">proper procedures are to be followed to insure that correct settings and logic are activated</p></details></li></ul><p id="da927099-e381-4273-bf8d-1efe78f6467d" class="">
+</p></details></li></ul><ul id="dc01971a-e0ca-4598-b1f7-3bb502a10fdd" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What are the major functional blocks of up-based relay?</strong></mark></summary><p id="6a73fd33-70f7-4aaf-8d93-717a148afc4c" class="">
+</p><figure id="6ca201bf-d8c8-42c2-9d12-dfe7ac74dba9" class="image"><a href="Digital%20Protection/Untitled%202.png"><img style="width:461px" src="Digital%20Protection/Untitled%202.png"/></a></figure><ul id="e57e36c5-bb14-4e99-b5e2-3680a80f8e4d" class="toggle"><li><details ><summary>Transducers  </summary><p id="bc553a92-317b-4d62-b216-e00a89c2c27c" class="">reduce voltage and current to 67 V and 5 A </p></details></li></ul><ul id="517cc76c-4fb8-48af-872f-5ec66bf62f5a" class="toggle"><li><details ><summary>Analogue input : </summary><p id="d098d8fb-1dc8-442f-b820-49ddd9f9026d" class="">isolates the relay from the power system, reduces the level of the input voltages, converts currents to equivalent voltages and remove high frequency components from the signals using input filters.</p></details></li></ul><ul id="29b56a4a-701d-401a-b7f5-aa423ce2763e" class="toggle"><li><details ><summary>Digital input</summary><p id="6d377f31-ebc4-42ac-a50f-4d92a24fecf5" class="">It provides the status of CBs and isolators to the relay.</p></details></li></ul><ul id="e9e741ed-f660-4d97-a1dc-4ed0cf85a620" class="toggle"><li><details ><summary>Analogue interface</summary><p id="6fc5fdc9-30a8-4bec-9aa9-b7076ac32f23" class="">It includes amplifiers, multiplexers and analog-to-digital (A/D) converters. It uses the output of analog input.</p></details></li></ul><ul id="0b4c0be9-e79e-4249-b244-73de6d9cdd74" class="toggle"><li><details ><summary>Microprocessor</summary><p id="18a9fc49-57f9-44bb-af9b-0bfd0d6300e2" class="">It processes the acquired information to decide whether the power system is experiencing a fault/abnormal operating condition or not. If it is, the relay sends a command open one or more CBs for isolating the fault zone of the power system.</p></details></li></ul><ul id="da8e106c-a9f3-4c6d-8b0a-05cd96b36b73" class="toggle"><li><details ><summary>RAM</summary><p id="6d368ed1-1f4b-4f80-b1e5-43d5c5ab6bf6" class="">It is used for storing data temporarily.</p></details></li></ul><ul id="0359e54f-b2b2-4635-9f8b-a935d41d0dc8" class="toggle"><li><details ><summary>ROM</summary><p id="7c0d83d8-a1e6-4c81-bdca-05dbd36713d4" class="">It is used for storing data permanently.</p></details></li></ul><ul id="a753fc9d-efe7-43a2-aed6-f50cdc65948b" class="toggle"><li><details ><summary>Control</summary></details></li></ul><ul id="814be4b3-7482-49fc-bcd5-72911ad4c2ee" class="toggle"><li><details ><summary>Communitcation</summary></details></li></ul><ul id="b212f063-76d5-4af6-8623-08da2f470cfe" class="toggle"><li><details ><summary>Digital Output</summary><p id="0499c2c8-d9f9-42a2-b53a-0db58a1e0479" class="">It transmits the trip output signals to the power system.</p></details></li></ul><ul id="017b5fa2-25f5-4997-ad13-a38ef653d31a" class="toggle"><li><details ><summary>Power supply</summary><p id="e2de3bb1-afbf-43aa-a27b-86361004d1a2" class="">It is used to provide energy to the relay during normal and abnormal operating conditions of the power system.</p></details></li></ul><p id="ff7940dd-befc-4d87-ab0e-778bf19ee6ec" class="">
+</p></details></li></ul><ul id="bded4c6f-7ad7-4ac6-ad8f-53b69a4ac26e" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What are the subsystems of a relaying computer?</strong></mark></summary><figure id="8041dc42-8eda-444a-bdc8-36d6c6bfaf3a" class="image"><a href="Digital%20Protection/Untitled%203.png"><img style="width:683px" src="Digital%20Protection/Untitled%203.png"/></a></figure><p id="22b2ece3-409a-4563-96af-13ec13fac9cb" class="">
+</p></details></li></ul><ul id="d67f9c1f-dd85-4245-adc3-750efc782a6c" class="toggle"><li><details ><summary><strong><mark class="highlight-red">Sketch the signal flow diagram of a numerical relay.</mark></strong></summary><figure id="1caec01e-80a0-4fe9-a807-2f5f91e9a081" class="image"><a href="Digital%20Protection/Untitled%204.png"><img style="width:687px" src="Digital%20Protection/Untitled%204.png"/></a></figure><p id="563810f3-403c-4c6b-916e-5aaebb1b8364" class="">
+</p></details></li></ul><ul id="075cecc0-a8a1-4d82-b4a3-5ab240086abb" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>How does the scaling of measured current and voltage happen ?</strong></mark></summary><figure id="669f8b97-b6ac-47dc-a8d0-70247d852878" class="image"><a href="Digital%20Protection/Untitled%205.png"><img style="width:677px" src="Digital%20Protection/Untitled%205.png"/></a></figure></details></li></ul><ul id="a73215d7-5711-4f97-a279-93d46d2f6c9d" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What&#x27;s the process of multiple signal sampling?</strong></mark></summary><p id="15f4951b-2b05-466c-a430-8d767016f302" class="">1- single ADC with multiplexed input</p><p id="24e6d850-4e63-41b8-98e3-cbaf03017a62" class="">
+</p><figure id="f04763a1-879b-40bd-a4d2-7ca27aa8a4f7" class="image"><a href="Digital%20Protection/Untitled%206.png"><img style="width:315px" src="Digital%20Protection/Untitled%206.png"/></a></figure><p id="4b96a599-5bb0-421a-bc95-0d532899865c" class="">2- Sample and hold added to each channel</p><p id="c399d8d9-04f8-453d-b35d-6d8f7a60ecc5" class="">
+</p><figure id="0053b139-cf76-4e54-af4b-a5de1c0cdabc" class="image"><a href="Digital%20Protection/Untitled%207.png"><img style="width:374px" src="Digital%20Protection/Untitled%207.png"/></a></figure><p id="46584a6f-1c15-4032-8221-66e084c31881" class="">
+</p><p id="967d36e3-4938-43b3-b7c6-35b33790d040" class="">3- Separate ADC for each channel</p><p id="a2256335-9084-4574-af8a-5fcf7b59df7a" class="">
+</p><figure id="eb4a46a1-d8e5-40f8-8e4a-e29429f5b8f6" class="image"><a href="Digital%20Protection/Untitled%208.png"><img style="width:338px" src="Digital%20Protection/Untitled%208.png"/></a></figure></details></li></ul><ul id="a8777f71-635e-40ba-b610-4288616db203" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>How to calculate the phase shift between two signals x, y ?</strong></mark></summary><figure id="8811a713-0b44-4e56-9dbc-1535a98d5256" class="image"><a href="Digital%20Protection/Untitled%209.png"><img style="width:353px" src="Digital%20Protection/Untitled%209.png"/></a></figure></details></li></ul><ul id="a7f91fcb-7981-4331-ad89-3eb98079aee7" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>Discuss Anti-Aliasing.</strong></mark></summary><p id="e2aa0990-f6ae-4d82-a967-ecb4d1fede3d" class=""><strong>Aliasing</strong> is the misrepresentation (during the conversion from Analog to Digital) of the high frequency component as a low frequency component.</p><p id="6387122c-bd7c-40dd-b952-fcebaf9ccbc5" class="">
+</p><p id="ba08e0ab-caa6-4fb5-bd08-e4098a7a4bd1" class=""><strong>Method to Minimize Aliasing</strong></p><ol id="5f89c5e1-5f7a-4287-8866-86ded18df0e2" class="numbered-list" start="1"><li>using low pass filter to remove high frequencies</li></ol><ol id="885f7691-1768-43af-9ade-762296a1f198" class="numbered-list" start="2"><li>digital filtering can be added as well </li></ol><p id="bb674ec3-637e-4df8-8afa-db953796d63b" class="">sampling rate and aliasing are interviewed by Nyquist Criterion</p><p id="7c03e94a-4d89-4931-92b2-d434301ad7ed" class="">
+</p><p id="2df43840-b5e2-41a8-ae71-800c57270a84" class="">anti aliasing filter c/cs</p><figure id="20dd8f97-d65f-4c4c-926b-4d0b45abc2c6" class="image"><a href="Digital%20Protection/Untitled%2010.png"><img style="width:702px" src="Digital%20Protection/Untitled%2010.png"/></a></figure></details></li></ul><p id="ffe71245-747c-46d8-ba56-46b8152d92cc" class="">
+</p><p id="ed605f99-e8d2-4a57-87f8-8ed1cf1b6b77" class="">
+</p><h1 id="ff879d8f-cce7-49aa-a1f6-71faa52bd01b" class=""><mark class="highlight-blue">Lecture 3 : DSP Technique</mark></h1><hr id="44c3b19e-cf5e-4bc7-88b4-d97955bc5123"/><ul id="5d47a315-6ec6-4619-aae3-612f1f296428" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>DSP equations </strong></mark></summary><figure id="d2ff2b9e-f9b0-4e06-93be-32c1d96a36d0" class="image"><a href="Digital%20Protection/Untitled%2011.png"><img style="width:679px" src="Digital%20Protection/Untitled%2011.png"/></a></figure></details></li></ul><ul id="76828039-2d32-422c-a4a6-91c28db624ba" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>DSP Examples</strong></mark></summary><p id="81c7f636-1371-48a3-bfce-4a277f4873f3" class="">
+</p><figure id="830362db-9cf2-4fe4-a2dd-04d2d285ef5a" class="image"><a href="Digital%20Protection/Untitled%2012.png"><img style="width:1788px" src="Digital%20Protection/Untitled%2012.png"/></a></figure></details></li></ul><h1 id="7d5de946-5a2e-4284-90d2-7c6e926780c3" class=""><mark class="highlight-blue">Lecture 4 : DFT Technique</mark></h1><hr id="a88ff1c8-3563-4039-82c0-c468e60ca919"/><p id="99e587b5-6ba6-4bc6-8afc-12136644ee20" class="">
+</p><ul id="cfaf1ea3-e4d8-4c4e-9624-2e555f74c653" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>Mention a case at which we need DFT</strong></mark></summary><p id="1e196fca-1c6e-45a8-be8a-87abc315d2de" class="">for 3ph or LL fault, where there is a DC offset, that would cause the current rms increase, causing overreaching, so we use the fundamentals rms to detect fault.</p></details></li></ul><ul id="695aae36-9160-4213-97b8-5be7c8882dcb" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>DFT equations </strong></mark></summary><p id="eea6952f-43c3-4aea-834b-09e6a275cb77" class="">
+</p><figure id="09ed9a3f-f5e9-4bd8-9bf5-df4c99863820" class="image"><a href="Digital%20Protection/Untitled%2013.png"><img style="width:579px" src="Digital%20Protection/Untitled%2013.png"/></a></figure><p id="72930513-1ed0-4dda-96d9-7d59194c253d" class="">recursive</p><figure id="eac1c817-9e9a-43df-95e8-b12e68447763" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mrow><mi>h</mi><mi>c</mi><mo separator="true">,</mo><mi>k</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>h</mi><mi>c</mi><mo separator="true">,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mfrac><mn>2</mn><mi>N</mi></mfrac><mo>[</mo><msub><mi>V</mi><mi>k</mi></msub><mi>c</mi><mi>o</mi><mi>s</mi><mo>(</mo><mi>h</mi><mi>r</mi><mi mathvariant="normal">Δ</mi><mi>θ</mi><mo>)</mo><mo>−</mo><msub><mi>V</mi><mrow><mi>k</mi><mo>−</mo><mi>N</mi></mrow></msub><mtext> </mtext><mi>c</mi><mi>o</mi><mi>s</mi><mo>(</mo><mi>h</mi><mi>r</mi><mi mathvariant="normal">Δ</mi><mi>θ</mi><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">V_{hc,k} =V_{hc,k-1} + \frac{2}{N} [ V_{k} cos(h r\Delta\theta) -V_{k-N} \ cos(h r\Delta\theta)  ]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">h</span><span class="mord mathdefault mtight">c</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">h</span><span class="mord mathdefault mtight">c</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">h</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">Δ</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">h</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">Δ</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></div></figure><figure id="523011d6-8cb7-4242-bc4c-809c1bfd3b81" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mrow><mi>h</mi><mi>s</mi><mo separator="true">,</mo><mi>k</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>h</mi><mi>s</mi><mo separator="true">,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mfrac><mn>2</mn><mi>N</mi></mfrac><mo>[</mo><msub><mi>V</mi><mi>k</mi></msub><mi>s</mi><mi>i</mi><mi>n</mi><mo>(</mo><mi>h</mi><mi>r</mi><mi mathvariant="normal">Δ</mi><mi>θ</mi><mo>)</mo><mo>−</mo><msub><mi>V</mi><mrow><mi>k</mi><mo>−</mo><mi>N</mi></mrow></msub><mtext> </mtext><mi>s</mi><mi>i</mi><mi>n</mi><mo>(</mo><mi>h</mi><mi>r</mi><mi mathvariant="normal">Δ</mi><mi>θ</mi><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">V_{hs,k} =V_{hs,k-1} + \frac{2}{N} [ V_{k} sin(h r\Delta\theta) -V_{k-N} \ sin(h r\Delta\theta)  ]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">h</span><span class="mord mathdefault mtight">s</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">h</span><span class="mord mathdefault mtight">s</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault">h</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">Δ</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault">h</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">Δ</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></div></figure><p id="5e6768cb-2ccb-481c-bd55-2fb71ec7525d" class="">same Zh and theta_h</p></details></li></ul><ul id="4da0ed03-b568-47e7-b554-133fdb8ba4be" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>DFT Example</strong></mark></summary><figure id="242f7c62-571e-4ca8-a968-8ccd05a01956" class="image"><a href="Digital%20Protection/Untitled%2014.png"><img style="width:1127px" src="Digital%20Protection/Untitled%2014.png"/></a></figure><p id="3fd51d08-53d2-41eb-ba55-d202e878d4df" class="">
+</p><figure id="4a061467-a7f3-43b1-8c2a-06dde64f7d6a" class="image"><a href="Digital%20Protection/Untitled%2015.png"><img style="width:874px" src="Digital%20Protection/Untitled%2015.png"/></a></figure><p id="b9eb8887-9b41-4567-8fd7-640ac5275fc7" class="">
+</p><figure id="2fb85e5e-2e5c-4eed-a24b-b28bf226ea32" class="image"><a href="Digital%20Protection/Untitled%2016.png"><img style="width:829px" src="Digital%20Protection/Untitled%2016.png"/></a></figure><figure id="3bc7bb59-b1ca-4f9b-9822-f922dde0078e" class="image"><a href="Digital%20Protection/Untitled%2017.png"><img style="width:822px" src="Digital%20Protection/Untitled%2017.png"/></a></figure><p id="25b917f2-c532-48ab-b2e9-35ad391fb519" class="">3rd Harmonic</p><p id="f7ed7aca-c4cf-4726-baa5-a8aeebbd25f7" class="">
+</p><figure id="5ce9c40c-33cf-41ed-a0cd-085ae78e6642" class="image"><a href="Digital%20Protection/Untitled%2018.png"><img style="width:825px" src="Digital%20Protection/Untitled%2018.png"/></a></figure><p id="144cffb1-fa4e-406a-ae0b-8ba28da4e268" class="">
+</p><figure id="b8c412f4-eb52-4bfa-b855-95e4d50827ea" class="image"><a href="Digital%20Protection/Untitled%2019.png"><img style="width:815px" src="Digital%20Protection/Untitled%2019.png"/></a></figure><p id="0ab141eb-2a68-41e9-a431-5f72e706e2a9" class="">
+</p><figure id="c4991837-bdb4-4b15-98ba-b188addd7226" class="image"><a href="Digital%20Protection/Untitled%2020.png"><img style="width:832px" src="Digital%20Protection/Untitled%2020.png"/></a></figure><p id="1e6a6570-7c10-4288-b466-1b31bc66c7b8" class="">
+</p></details></li></ul><p id="d00c5a5e-9c79-4f79-aa5f-576b67e6c8c9" class="">
+</p><h1 id="ba928e18-5fd9-47d3-b313-c3a4273733bd" class=""><mark class="highlight-blue">Lecture 5 : Least Squares Method</mark></h1><hr id="c3d1c79e-b0b9-4563-be42-8aa40b38c229"/><p id="e59ab684-6023-482c-9cb7-c7eee70fe3c1" class="">
+</p><ul id="0410de6d-f8ef-42a8-a9c5-7bc56b649297" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What&#x27;s Least Error Squares used for?</strong></mark></summary><p id="1df35e9a-8760-48b4-96ec-826a9cfa4002" class="">it&#x27;s used to estimate the phasors of fundamental and harmonics. of voltages and currents</p><p id="290c2f11-d5d4-4f1e-b662-f6e2ce4e119b" class=""><strong>it&#x27;s based on</strong> </p><p id="bf26f88c-110f-4999-b504-237b7735f17c" class="">minimizing the error between actual and assumed waveforms</p></details></li></ul><ul id="3931c223-0c58-41e6-820b-51ee77d90d54" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>How is the assumed waveform modeled ?</strong></mark></summary><figure id="3b7c568a-0144-4b7e-be39-b9314d7af8f5" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msub><mi>V</mi><mn>0</mn></msub><mtext> </mtext><msup><mi>e</mi><mfrac><mrow><mo>−</mo><mi>t</mi></mrow><mi>τ</mi></mfrac></msup><mo>+</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>V</mi><mi>n</mi></msub><mtext> </mtext><mi>s</mi><mi>i</mi><mi>n</mi><mrow><mo>(</mo><mi>n</mi><msub><mi>ω</mi><mi>o</mi></msub><mi>t</mi><mo>+</mo><msub><mi>θ</mi><mi>n</mi></msub><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">v(t) = V_0 \ e^{\frac{-t}{\tau}} + \sum_{n=1}^{N} V_n \ sin{(n\omega_o t + \theta_n)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.13934em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.98934em;"><span style="top:-3.4130000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8233428571428572em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.1132em;">τ</span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:3.0954490000000003em;vertical-align:-1.267113em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283360000000002em;"><span style="top:-1.882887em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.267113em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord"><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></div></figure><p id="be84e1a4-8628-4f51-8220-dfc7dc957d78" class="">an exponentially decaying DC and fundamental and harmonics</p><p id="06657e3e-6c5f-4fc2-a81e-ec197da0ad61" class="">
+</p><p id="79b352ec-e904-43b1-b639-e2f9576637fc" class="">from it with taylor expansion</p><figure id="5d74ca86-6ac7-4d59-b454-906448dde57f" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msub><mi>V</mi><mn>0</mn></msub><mo>−</mo><mo>(</mo><mfrac><msub><mi>V</mi><mi>o</mi></msub><mi>τ</mi></mfrac><mo>)</mo><mi>t</mi><mo>+</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>V</mi><mi>n</mi></msub><mtext> </mtext><mi>s</mi><mi>i</mi><mi>n</mi><mrow><mo>(</mo><mi>n</mi><msub><mi>ω</mi><mi>o</mi></msub><mi>t</mi><mo>+</mo><msub><mi>θ</mi><mi>n</mi></msub><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">v(t) = V_0 - (\frac{V_o}{\tau})t + \sum_{n=1}^{N} V_n \ sin{(n\omega_o t + \theta_n)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:3.0954490000000003em;vertical-align:-1.267113em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283360000000002em;"><span style="top:-1.882887em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.267113em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord"><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></div></figure><p id="1164e892-101d-4273-b6cb-30079a59e790" class="">and from expanding the summation</p><p id="e3717f44-13a0-46ce-a9ff-0f04142dda24" class="">
+</p><figure id="c1a24f92-4201-4111-813f-0c2e43bcf6c9" class="image"><a href="Digital%20Protection/Untitled%2021.png"><img style="width:854px" src="Digital%20Protection/Untitled%2021.png"/></a></figure><p id="1222847a-a5e0-471b-9d07-1dc524a1973b" class="">from trigonometric relations</p><p id="4c5497d3-7637-4446-b59e-3ad00e31581f" class="">
+</p><figure id="0979d11c-1664-43b8-b923-bec4a0f0bce2" class="image"><a href="Digital%20Protection/Untitled%2022.png"><img style="width:868px" src="Digital%20Protection/Untitled%2022.png"/></a></figure><figure id="4ce218cb-608f-46ee-b48f-7d8c4a8f4363" class="image"><a href="Digital%20Protection/Untitled%2023.png"><img style="width:835px" src="Digital%20Protection/Untitled%2023.png"/></a></figure><figure id="3636acc1-73da-4f3d-805d-adde17ada4b4" class="image"><a href="Digital%20Protection/Untitled%2024.png"><img style="width:831px" src="Digital%20Protection/Untitled%2024.png"/></a></figure><figure id="9c85b08c-2ab0-4913-9c27-cea7e3fe66bc" class="image"><a href="Digital%20Protection/Untitled%2025.png"><img style="width:291px" src="Digital%20Protection/Untitled%2025.png"/></a></figure><figure id="00629b97-91c6-42d8-af88-4b0cf65f6d22" class="image"><a href="Digital%20Protection/Untitled%2026.png"><img style="width:844px" src="Digital%20Protection/Untitled%2026.png"/></a></figure><figure id="21e86f5b-2183-4956-86d9-bc558ecedf5b" class="image"><a href="Digital%20Protection/Untitled%2027.png"><img style="width:848px" src="Digital%20Protection/Untitled%2027.png"/></a></figure><figure id="fcacd3f8-4527-44b6-861a-a3acc27781c7" class="image"><a href="Digital%20Protection/Untitled%2028.png"><img style="width:861px" src="Digital%20Protection/Untitled%2028.png"/></a></figure><figure id="bfbe87fe-c27a-4cac-92bf-e5740a8e6959" class="image"><a href="Digital%20Protection/Untitled%2029.png"><img style="width:860px" src="Digital%20Protection/Untitled%2029.png"/></a></figure><p id="86d758a0-54e4-463c-92ff-333e43081eb1" class="">
+</p></details></li></ul><ul id="f8d991bc-f8e1-4b98-ac67-93913fad3ff8" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>Example :</strong></mark></summary><figure id="33842df5-32e0-47c6-8cee-7a397130fa72" class="image"><a href="Digital%20Protection/Untitled%2030.png"><img style="width:823px" src="Digital%20Protection/Untitled%2030.png"/></a></figure><p id="d5cbdacb-676e-419d-8b6e-3dd1b1a078ed" class="">
+</p><figure id="0bcd4985-c368-4b37-a5bd-7766c243c04d" class="image"><a href="Digital%20Protection/Untitled%2031.png"><img style="width:848px" src="Digital%20Protection/Untitled%2031.png"/></a></figure><p id="ed85a7eb-ef72-48e8-802b-ed5f4886226e" class="">
+</p><figure id="a3daa4ff-ab0c-4831-ad7b-2a85be3a518a" class="image"><a href="Digital%20Protection/Untitled%2032.png"><img style="width:837px" src="Digital%20Protection/Untitled%2032.png"/></a></figure><p id="5dd638b9-cf31-42e1-a47c-bc5e90632529" class="">
+</p><figure id="aba96d10-67f7-4f17-9e90-c759bb8ecf79" class="image"><a href="Digital%20Protection/Untitled%2033.png"><img style="width:863px" src="Digital%20Protection/Untitled%2033.png"/></a></figure><p id="f204205a-4ad2-4420-99a9-ca8672b3785d" class="">
+</p><figure id="7f05673b-c2e6-4888-b4e6-c8170b224dbd" class="image"><a href="Digital%20Protection/Untitled%2034.png"><img style="width:867px" src="Digital%20Protection/Untitled%2034.png"/></a></figure><p id="e6e9028d-d90b-4758-a867-3db0b139b581" class="">
+</p><figure id="f839f1a3-473c-4892-89d5-dd9b6024a880" class="image"><a href="Digital%20Protection/Untitled%2035.png"><img style="width:668px" src="Digital%20Protection/Untitled%2035.png"/></a></figure><figure id="e8f21211-a32d-4b6e-b46d-1334ef016c89" class="image"><a href="Digital%20Protection/Untitled%2036.png"><img style="width:581px" src="Digital%20Protection/Untitled%2036.png"/></a></figure><p id="7d9dcdd3-7c05-4e28-9f79-1e67de5730c6" class="">
+</p><figure id="7d2ee43c-9069-4898-83c8-8df6bf243956" class="image"><a href="Digital%20Protection/Untitled%2037.png"><img style="width:569px" src="Digital%20Protection/Untitled%2037.png"/></a></figure><p id="55ae193a-955d-4543-b679-50ce293ae250" class="">
+</p><figure id="8048fb30-447b-4b57-a644-70a7e8212089" class="image"><a href="Digital%20Protection/Untitled%2038.png"><img style="width:488px" src="Digital%20Protection/Untitled%2038.png"/></a></figure><p id="775e3464-8dc4-4b66-8bc5-aff4e135df25" class="">
+</p><figure id="6ffd3251-891c-4a6c-b84d-81a97bc04334" class="image"><a href="Digital%20Protection/Untitled%2039.png"><img style="width:808px" src="Digital%20Protection/Untitled%2039.png"/></a></figure></details></li></ul><ul id="e13a3572-4adf-4267-85a9-1cc425796c3f" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What are advantages of least squares technique </strong></mark></summary><ol id="14e9596c-421b-48e0-a743-0054de932e83" class="numbered-list" start="1"><li>method is that the sampling rate does not need to be an <mark class="highlight-orange">integer </mark>number of <mark class="highlight-orange">samples per cycle. </mark>
+<em>However, the sampling rate needs to be proportionally adjusted when the power system frequency changes, to minimize the magnitude and angle errors introduced by this change.</em></li></ol><ol id="0fa248d4-1b18-457a-be9d-2ae3c6c5f821" class="numbered-list" start="2"><li>the description of the curve to be fitted does not need to be a sine function, in this sense the least squares method is <mark class="highlight-orange">more general.</mark></li></ol><p id="7112bd2e-4120-4b48-bf8e-e90ebad97798" class="">
+</p></details></li></ul><p id="9b4390bd-b629-4f40-b9f0-74e4d06a54a4" class="">
+</p><h1 id="437a9678-aec9-47a7-a73e-ebc74c881da6" class=""><mark class="highlight-blue">Lecture 6 : Wavelet</mark></h1><hr id="d47e2cc6-5d0b-424d-a771-2cbf757eb81f"/><p id="ec85b7cd-fae7-42aa-a0a5-2d22f2db78d5" class="">
+</p><ul id="59e12b0b-9bbe-46b4-ad40-03e7775b012f" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What are fault allocation methods ?</strong></mark></summary><ol id="182ad4c2-7f9d-4435-9cc5-444e81595663" class="numbered-list" start="1"><li><strong>Impedance based methods</strong><ul id="dfda8af2-6d43-4538-a549-9b8125c4aae4" class="bulleted-list"><li>the most used method</li></ul><ul id="12f7304e-caac-4f84-80d8-5232cc02fd01" class="bulleted-list"><li>simplest</li></ul><ul id="74c39144-bc63-4bee-9e0e-a793ee03cc35" class="bulleted-list"><li>low cost</li></ul><ul id="2f66e8ea-01b8-464d-a8ce-c7ab7fbdaf2c" class="bulleted-list"><li>accuracy limitation due to impedance change, mutual coupling, series compensation and variability of fault resistance.</li></ul></li></ol><ol id="fd0c28de-9f06-4ff0-bd80-12adf38899b7" class="numbered-list" start="2"><li><strong>Learning based methods</strong><ul id="03563c6f-1d22-4a61-899a-7050430ee1d1" class="bulleted-list"><li>doesn&#x27;t require detailed information about system</li></ul><ul id="5a395bfd-9cf4-4510-bce1-917c7e337b58" class="bulleted-list"><li>doesn&#x27;t require complex and expensive devices</li></ul><ul id="0baf9646-31bc-4da1-bbbb-0bdb6a0a457b" class="bulleted-list"><li>based on trial and error technique</li></ul></li></ol><ol id="dfb89cf3-fdac-4c84-8ffc-c9a819a64f51" class="numbered-list" start="3"><li><strong>Travelling wave fault location</strong><p id="43e20654-deca-4ba9-870b-1e9ede2478bd" class="">
+</p><ul id="0ae3c2b1-34fd-4d85-a318-88cf62bff99b" class="bulleted-list"><li>the most <strong>accurate</strong> fault location method</li></ul><ul id="519e76c7-50e8-4b60-b3ac-5deda4fda5ac" class="bulleted-list"><li>not affected by inception angle, mutual coupling or fault resistance </li></ul><ul id="ae818eb1-afd2-4cc1-bd6b-74cd870ddfb9" class="bulleted-list"><li>but as it propagates with the speed of light it requires high sampling rate and accurate timing and synchronization devices.</li></ul></li></ol></details></li></ul><ul id="d8e1f017-d4b0-40dc-a474-5895ce666c9d" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>how does traveling wave fault location work?</strong></mark></summary><p id="e93e2c3e-1d44-437b-bc48-27bd536aa69f" class="">when a disturbance occurs in a transmission line or cable a forward and backward, high frequency traveling wave signals will be generated propagating toward both transmission line ends.</p><p id="bbffea78-4b4c-43d7-a91b-f4fb29554d25" class="">by determining the arrival time of those signals the fault location could be determined accurately.</p><p id="63a143e2-1595-4392-ad18-6553c52e1c05" class="">
+</p><ol id="71cff08b-0950-4acd-b171-49d91f26c598" class="numbered-list" start="1"><li><strong>double end technique</strong></li></ol><figure id="06fd6e7e-3af2-44fa-aa67-9087bed95284" class="image"><a href="Digital%20Protection/Untitled%2040.png"><img style="width:715px" src="Digital%20Protection/Untitled%2040.png"/></a></figure><figure id="b3094208-77f8-4df7-b884-a9d5ee7bb6c3" class="image"><a href="Digital%20Protection/Untitled%2041.png"><img style="width:219px" src="Digital%20Protection/Untitled%2041.png"/></a></figure><figure id="315e1725-fe5e-492c-8dae-d454a8b2aa75" class="image"><a href="Digital%20Protection/Untitled%2042.png"><img style="width:772px" src="Digital%20Protection/Untitled%2042.png"/></a></figure><p id="1134eeff-88f3-4a89-bc49-62fb7290eefb" class="">GPS used to synchronize the arrival time</p><p id="76286901-f873-4229-bd72-98c6e312c203" class=""><strong>2. Single-end technique</strong></p><figure id="79de4244-fb67-4704-8305-d87f2fe0c487" class="image"><a href="Digital%20Protection/Untitled%2043.png"><img style="width:669px" src="Digital%20Protection/Untitled%2043.png"/></a></figure><figure id="18226137-645c-4fea-ab99-e437f00f3698" class="image"><a href="Digital%20Protection/Untitled%2044.png"><img style="width:209px" src="Digital%20Protection/Untitled%2044.png"/></a></figure><figure id="1be8294b-f602-4458-ac8e-418a4c9acad0" class="image"><a href="Digital%20Protection/Untitled%2045.png"><img style="width:735px" src="Digital%20Protection/Untitled%2045.png"/></a></figure></details></li></ul><ul id="666b4b86-479a-4490-8821-52b8184c01e2" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What are fault types wrt their instance of occurrence ?</strong></mark></summary><ol id="af4ac33f-1371-4751-9b0c-738645243a0c" class="numbered-list" start="1"><li>single fault</li></ol><ol id="bdeae92d-22a9-4019-b140-6f04d916f843" class="numbered-list" start="2"><li>simultaneous faults</li></ol><p id="3e9d97bd-dcd5-4958-a6d9-0066783be3e7" class="">simultaneous faults can&#x27;t locate using previous techniques</p><figure id="2848c5d2-3674-4752-b43a-a733fff14728" class="image"><a href="Digital%20Protection/Untitled%2046.png"><img style="width:644px" src="Digital%20Protection/Untitled%2046.png"/></a></figure></details></li></ul><ul id="080e372d-fe79-4b36-80c4-d58e72cd6dac" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>How to discriminate between single and simultaneous faults</strong></mark></summary><p id="a8d3f238-403e-403e-8761-f6f79f7c9b8f" class="">
+</p><figure id="ecb13ba1-f07e-437d-a7ba-47f1779c2d81" class="image"><a href="Digital%20Protection/Untitled%2047.png"><img style="width:790px" src="Digital%20Protection/Untitled%2047.png"/></a></figure><ul id="1f0046f2-7f7d-487e-8799-f740f90d58fa" class="toggle"><li><details ><summary><mark class="highlight-orange"><strong>if it&#x27;s single fault</strong></mark></summary><figure id="85e3f3ab-8aa8-421c-90a8-035a3201d238" class="image"><a href="Digital%20Protection/Untitled%2048.png"><img style="width:551px" src="Digital%20Protection/Untitled%2048.png"/></a></figure></details></li></ul><ul id="5ab4af1e-abf9-4929-940c-cfc071cac888" class="toggle"><li><details ><summary><strong><mark class="highlight-orange">if it is simultaneous</mark></strong></summary><p id="a0d6027b-401f-4725-83de-662ab3e7a570" class="">DEFINITIONS </p><figure id="a8728716-78ac-4865-b55f-b13654aa9f36" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mi>l</mi><mo>−</mo><mi>v</mi><mo>(</mo><msub><mi>t</mi><mrow><mi>b</mi><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>t</mi><mrow><mi>a</mi><mn>1</mn></mrow></msub><mo>)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">x = \frac{l-v(t_{b1}-t_{a1})}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><figure id="42c9f184-de72-4f19-8b7a-95acaeec4caf" class="image"><a href="Digital%20Protection/Untitled%2049.png"><img style="width:691px" src="Digital%20Protection/Untitled%2049.png"/></a></figure><figure id="e3917ccc-24d7-4760-a7b7-cebb0ab3eb20" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub><mo>=</mo><mi>v</mi><mo>(</mo><msub><mi>t</mi><mrow><mi>b</mi><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>t</mi><mrow><mi>a</mi><mn>1</mn></mrow></msub><mo>)</mo><mo>=</mo><msub><mi>Y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>Y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x_{ab} = v(t_{b1} - t_{a1} ) = Y_2 - Y_1 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><figure id="8a0110d3-098c-4958-994b-f2941c144b51" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>a</mi></msub><mo>=</mo><mfrac><mrow><mi>v</mi><mo>(</mo><msub><mi>t</mi><mrow><mi>a</mi><mn>2</mn></mrow></msub><mo>−</mo><msub><mi>t</mi><mrow><mi>a</mi><mn>1</mn></mrow></msub><mo>)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">x_a = \frac{v(t_{a2}-t_{a1})}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><figure id="88031f59-524c-482a-a94d-9bef3d1958a8" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>b</mi></msub><mo>=</mo><mfrac><mrow><mi>v</mi><mo>(</mo><msub><mi>t</mi><mrow><mi>b</mi><mn>2</mn></mrow></msub><mo>−</mo><msub><mi>t</mi><mrow><mi>b</mi><mn>1</mn></mrow></msub><mo>)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">x_b = \frac{v(t_{b2}-t_{b1})}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><figure id="a0cc6680-cef3-4c58-915e-8965b64dce39" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mi>l</mi><mo>−</mo><mi>v</mi><mo>(</mo><msub><mi>t</mi><mrow><mi>b</mi><mn>2</mn></mrow></msub><mo>−</mo><msub><mi>t</mi><mrow><mi>a</mi><mn>1</mn></mrow></msub><mo>)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">x_1 = \frac{l-v(t_{b2}-t_{a1})}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><figure id="701ae1e7-29a8-4837-95ed-dd7deb41a70a" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mi>l</mi><mo>−</mo><mi>v</mi><mo>(</mo><msub><mi>t</mi><mrow><mi>a</mi><mn>2</mn></mrow></msub><mo>−</mo><msub><mi>t</mi><mrow><mi>b</mi><mn>1</mn></mrow></msub><mo>)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">x_2 = \frac{l-v(t_{a2}-t_{b1})}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="984e6a4d-52e6-4370-afc5-9002b4f39e73" class="">
+</p><figure id="9492e570-1268-4147-b1f1-5a49d306e72f" class="image"><a href="Digital%20Protection/Untitled%2050.png"><img style="width:783px" src="Digital%20Protection/Untitled%2050.png"/></a></figure><p id="39cb0b07-4b51-4993-b42a-00e119abab77" class="">
+</p></details></li></ul></details></li></ul><ul id="b9813298-29b5-4919-8fe5-7bcbdcda8175" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>What&#x27;s discrete wavelet transform</strong></mark></summary><p id="f31362a4-916c-4cdd-9274-eb696c933212" class="">Wavelet transform is a mathematical technique used in signal analysis.</p><p id="ab750e73-00a8-4f5c-89ac-3d442cbf1b4b" class="">works a high and low pass filter, so it can represent the high frequency signals in both time and frequency domains accurately.</p><p id="c0e9ac1b-b278-4d12-a74d-627f5547ae5e" class="">
+</p><figure id="f7fc61f7-c17b-48fa-ba1e-c87593d56442" class="image"><a href="Digital%20Protection/Untitled%2051.png"><img style="width:733px" src="Digital%20Protection/Untitled%2051.png"/></a></figure><p id="f266bdf9-646c-4afb-849b-31d8e80fe961" class="">
+</p></details></li></ul><ul id="8f5d0301-8b46-4477-a73d-db3410e17e3a" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>Discuss parameters effect on the performance of fault location algorithm.</strong></mark></summary><ul id="b7addcd4-7b64-4d2b-8fc6-3be4403f5c28" class="toggle"><li><details ><summary>Sampling frequency</summary><p id="fac2967c-5779-4f52-b6ab-695d6fca54d4" class="">
+</p><ul id="c83feff5-ab94-435a-9d62-92f3348e9525" class="toggle"><li><details ><summary>Error percentage</summary><figure id="fea96595-ede3-493c-acd9-74c4e2613f6d" class="image"><a href="Digital%20Protection/Untitled%2052.png"><img style="width:702px" src="Digital%20Protection/Untitled%2052.png"/></a></figure><figure id="dff4e774-5fca-4594-9806-59273bdc130f" class="image"><a href="Digital%20Protection/Untitled%2053.png"><img style="width:741px" src="Digital%20Protection/Untitled%2053.png"/></a></figure></details></li></ul><ul id="337e4a1d-4d5a-4403-9b42-c3147a4ec42b" class="toggle"><li><details ><summary>min distances</summary><p id="7fc95310-b361-4d00-9142-b20ef2beec71" class="">
+</p><figure id="2055cdca-a51c-4555-aab1-89a5ea0ceca5" class="image"><a href="Digital%20Protection/Untitled%2054.png"><img style="width:756px" src="Digital%20Protection/Untitled%2054.png"/></a></figure><p id="bdef5c72-6bdf-4280-a9d2-127a8dc3dddd" class="">
+</p><figure id="c737789f-0150-4b6e-bd24-8fa4ad17966c" class="image"><a href="Digital%20Protection/Untitled%2055.png"><img style="width:721px" src="Digital%20Protection/Untitled%2055.png"/></a></figure><p id="7f76fff4-c5f2-4547-9b4b-be2908957f6c" class="">
+</p></details></li></ul></details></li></ul><ul id="5b198df7-4de9-42eb-bb77-6a2e1220f1ee" class="toggle"><li><details ><summary>fault inception angle</summary><p id="b7f947b9-9dde-4198-a8fb-0d553f5c945f" class="">
+</p><figure id="0af3cfb2-f965-49d0-8c87-e3116d1dca3e" class="image"><a href="Digital%20Protection/Untitled%2056.png"><img style="width:801px" src="Digital%20Protection/Untitled%2056.png"/></a></figure><figure id="d1acceec-fdd3-4cb1-a1a0-eae848865003" class="image"><a href="Digital%20Protection/Untitled%2057.png"><img style="width:799px" src="Digital%20Protection/Untitled%2057.png"/></a></figure></details></li></ul><ul id="587b55e2-a55a-4f96-92b0-9c3e9b80e0ab" class="toggle"><li><details ><summary>static var compensator</summary><figure id="94e8659f-1637-4648-b9f8-0e862cbecd95" class="image"><a href="Digital%20Protection/Untitled%2058.png"><img style="width:811px" src="Digital%20Protection/Untitled%2058.png"/></a></figure></details></li></ul><figure id="50c7ddb1-5984-45a1-89a8-2c9e8b184684" class="image"><a href="Digital%20Protection/Untitled%2059.png"><img style="width:815px" src="Digital%20Protection/Untitled%2059.png"/></a></figure><figure id="7a86f5c5-3be3-48eb-9fe4-22ffc09ada50" class="image"><a href="Digital%20Protection/Untitled%2060.png"><img style="width:806px" src="Digital%20Protection/Untitled%2060.png"/></a></figure><p id="d21fe684-4ac3-493c-88e0-d6eb19c145ff" class="">
+</p></details></li></ul><ul id="684acaa9-72cf-49fd-91cd-0ea01077537c" class="toggle"><li><details ><summary><mark class="highlight-red"><strong>Explain the modified algorithm for simultaneous fault with time shift.</strong></mark></summary><p id="9a15c373-b14f-4826-b495-af8cb4073f00" class="">supposing we know x, then T1 to end A and T2 to end B</p><figure id="10440dd2-e1f3-4ad3-95ec-8d317535569b" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mo>=</mo><mfrac><mi>x</mi><mi>v</mi></mfrac></mrow><annotation encoding="application/x-tex">T_1 = \frac{x}{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.7935600000000003em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><figure id="dd7e637e-9169-497b-a2bb-b1c12c91111b" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mi>l</mi><mo>−</mo><mi>x</mi></mrow><mi>v</mi></mfrac></mrow><annotation encoding="application/x-tex">T_2 = \frac{l-x}{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><h3 id="e4446cff-5231-4ff5-be9f-021c362cd959" class="">for phase fault</h3><figure id="6918f99a-61ec-4933-8249-0735014cbf70" class="image"><a href="Digital%20Protection/Untitled%2061.png"><img style="width:772px" src="Digital%20Protection/Untitled%2061.png"/></a></figure><h3 id="bb976167-0dad-40a2-b25f-f622087f3a4e" class="">for ground fault</h3><figure id="06824931-e9af-48ad-a0f3-00fe6907c92a" class="image"><a href="Digital%20Protection/Untitled%2062.png"><img style="width:767px" src="Digital%20Protection/Untitled%2062.png"/></a></figure><p id="69bf9ac6-8e29-4892-9886-e0e4b1561d94" class="">
+</p><figure id="9e2be6c9-a6bd-4495-a858-9510c50e8c16" class="image"><a href="Digital%20Protection/Untitled%2063.png"><img style="width:487px" src="Digital%20Protection/Untitled%2063.png"/></a></figure><figure id="f62e0a82-43b4-4c79-bb05-ab9bb769c9e9" class="image"><a href="Digital%20Protection/Untitled%2064.png"><img style="width:1089px" src="Digital%20Protection/Untitled%2064.png"/></a></figure><p id="d45bd80a-0302-4ced-abdb-c4e57e48072c" class="">
+</p><figure id="5d9431af-bd1b-4e90-9ab3-b221bca60a3e" class="image"><a href="Digital%20Protection/Untitled%2065.png"><img style="width:777px" src="Digital%20Protection/Untitled%2065.png"/></a></figure><p id="cd0879bb-ee9d-44ab-b2d8-1f0675fc1a53" class="">
+</p><figure id="9dd3ae21-1732-4cf2-b5a4-0f35c8f5d0c7" class="image"><a href="Digital%20Protection/Untitled%2066.png"><img style="width:759px" src="Digital%20Protection/Untitled%2066.png"/></a></figure></details></li></ul><p id="1f8978f5-81b3-4ac6-a049-5ad239868e51" class="">
+</p></div></article></body></html>
