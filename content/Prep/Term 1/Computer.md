@@ -6,6 +6,17 @@ weight : 6
 ---
 
 
+## Recap
+
+|  | |
+|---:|----------------------|
+| {{% button href="/Prep/Files/Computer-Ch1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - شابتر 1 |
+| {{% button href="/Prep/Files/Computer-Ch2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - شابتر 2 |
+| {{% button href="/Prep/Files/Computer-Ch3.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - شابتر 3 |
+| {{% button href="/Prep/Files/Computer-Ch4.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - شابتر 4 |
+| {{% button href="/Prep/Files/Computer-Ch5.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - شابتر 5 |
+| {{% button href="/Prep/Files/Computer-Ch6.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - شابتر 6 |
+
 ## Lectures
 
 
