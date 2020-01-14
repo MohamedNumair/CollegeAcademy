@@ -10,6 +10,7 @@ weight : 6
 
 |  | |
 |---:|----------------------|
+| {{% button href="/Prep/Files/Computer-2020-Midterm.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | حل ميدتيرم الكمبيوتر 2020 |
 | {{% button href="/Prep/Files/Computer-final-revision.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - مراجعة نهائية |
 | {{% button href="/Prep/Files/Computer-Ch1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - شابتر 1 |
 | {{% button href="/Prep/Files/Computer-Ch2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الكمبيوتر - شابتر 2 |
