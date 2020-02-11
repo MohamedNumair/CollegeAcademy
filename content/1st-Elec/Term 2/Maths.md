@@ -8,10 +8,7 @@ weight : 5
 
 ## Lectures
 
-
-|  | |
 | {{% button href="/1st-Elec/files/Linear_PDE_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | المحاضرة الأولى - المعادلات التفاضلية الجزئية |
-| || 
 
 ## Sections
 
