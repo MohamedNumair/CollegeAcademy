@@ -9,9 +9,9 @@ weight : 5
 ## Lectures
 |  | |
 |---:|----------------------|
-|{{% button href="/1st-Elec/files/Linear_PDE_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | المحاضرة الأولى - المعادلات التفاضلية الجزئية |
+|{{% button href="/1st-Elec/files/Computer_architecture_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | المحاضرة الأولى - بنية حاسب |
 |  | |
-|{{% button href="/1st-Elec/files/Fourier_Series_Lapalce_Transform_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} | المحاضرة الأولى - د.عبد الله عباس -Fourier Series & Laplace Transform |
+
 ## Sections
 
 |  | |
