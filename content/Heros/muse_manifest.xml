@@ -1,8 +1,8 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="collegetanta.cf" resolutions="1x" timestamp="1581982977254">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="collegetanta.cf" resolutions="1x" timestamp="1582045170798">
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="index.css" crc="4069394461" ref="index"/>
-    <file name="nomq_index.css" crc="152071135" ref="index"/>
+    <file name="index.css" crc="4162339864" ref="index"/>
+    <file name="nomq_index.css" crc="4054868045" ref="index"/>
     <file name="master_a-master.css" crc="4066765802" ref="index"/>
     <file name="nomq_preview_master_a-master.css" crc="3824530138" ref="index"/>
   </folder>
@@ -89,7 +89,6 @@
     </file>
     <file name="u2144-4.png" crc="38145511" ref="index"/>
     <file name="u2145-4.png" crc="3915758280" ref="index"/>
-    <file name="u2148-4.png" crc="4180591280" ref="index"/>
     <file name="u2143-4.png" crc="4193741970" ref="index"/>
     <file name="u2152-4.png" crc="4052568975" ref="index"/>
     <file name="u2146-4.png" crc="262711677" ref="index"/>
@@ -125,7 +124,6 @@
     <file name="u2673-42.png" crc="3876342146" ref="index"/>
     <file name="u2144-42.png" crc="41264371" ref="index"/>
     <file name="u2145-42.png" crc="123425945" ref="index"/>
-    <file name="u2148-42.png" crc="4047741961" ref="index"/>
     <file name="u2143-42.png" crc="232124979" ref="index"/>
     <file name="u2152-42.png" crc="310786182" ref="index"/>
     <file name="u2146-42.png" crc="304188844" ref="index"/>
@@ -155,7 +153,6 @@
     <file name="u2673-43.png" crc="366950147" ref="index"/>
     <file name="u2144-43.png" crc="3770937587" ref="index"/>
     <file name="u2145-43.png" crc="426108606" ref="index"/>
-    <file name="u2148-43.png" crc="4067483657" ref="index"/>
     <file name="u2143-43.png" crc="4262969926" ref="index"/>
     <file name="u2152-43.png" crc="4019740292" ref="index"/>
     <file name="u2146-43.png" crc="477016153" ref="index"/>
@@ -185,7 +182,6 @@
     <file name="u2673-44.png" crc="4037866200" ref="index"/>
     <file name="u2144-44.png" crc="445814766" ref="index"/>
     <file name="u2145-44.png" crc="4255010972" ref="index"/>
-    <file name="u2148-44.png" crc="3959758777" ref="index"/>
     <file name="u2143-44.png" crc="366690500" ref="index"/>
     <file name="u2152-44.png" crc="3792473103" ref="index"/>
     <file name="u2146-44.png" crc="4148035029" ref="index"/>
@@ -215,6 +211,10 @@
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
     </file>
+    <file name="u2148-9.png" crc="253966195" ref="index"/>
+    <file name="u2148-92.png" crc="10309778" ref="index"/>
+    <file name="u2148-93.png" crc="89390362" ref="index"/>
+    <file name="u2148-94.png" crc="356147333" ref="index"/>
   </folder>
-  <file name="index.html" crc="3765114638" seo="true" mt="1581982954676" redirect="true"/>
+  <file name="index.html" crc="4052689917" seo="true" mt="1582045108541" redirect="true"/>
 </manifest>
