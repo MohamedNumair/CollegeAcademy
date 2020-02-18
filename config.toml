@@ -16,7 +16,7 @@ defaultContentLanguage = "ar"
 
 [[menu.shortcuts]] 
 name = "<i class='fas fa-users'></i> COLLEGE Team"
-identifier = "Heros"
-url = "https://collegetanta.cf/heros/"
+identifier = "Heroes"
+url = "https://collegetanta.cf/heroes/"
 weight = 10
 
