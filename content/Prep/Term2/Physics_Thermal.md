@@ -12,9 +12,9 @@ weight : 8
 
 ## Sections
 
-|  | |
+|---:|----------------------|
 | {{% button href="/Prep/Files/Thermal_Physics_ General_gas_equation.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المعادلة العامة للغازات - فيزياء حرارية|
-| || 
+
 
 ## Sheets with Solutions
 
