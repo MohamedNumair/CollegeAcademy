@@ -10,7 +10,7 @@ weight : 8
 | ||
 |---:|----------------------|
 | {{% button href="/Prep/Files/Integration_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الأولى - التكامل|
-| {{% button href="/Prep/Files/Integration_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - التكامل|
+| {{% button href="/Prep/Files/Integration_Lecture2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - التكامل|
 
 ## Sections
 
