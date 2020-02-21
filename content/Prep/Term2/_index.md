@@ -6,7 +6,7 @@ chapter = true
 pre = "<i class='fas fa-graduation-cap'></i> "
 +++
 
-# Prep Year : Term 1
+# Prep Year : Term 2
 
 ### Subjects :
 
