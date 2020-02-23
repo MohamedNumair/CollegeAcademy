@@ -12,6 +12,7 @@ weight : 8
 | {{% button href="/Prep/Files/Integration_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الأولى - تكامل|
 | {{% button href="/Prep/Files/Integration_Lecture2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - تكامل|
 
+
 ## Sections
 
 |  | |
@@ -28,5 +29,5 @@ weight : 8
 
 |  | |
 |---:|----------------------|
-
+| {{% button href="/Prep/Files/Integration_Future1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |تكامل - م.الشافعى -سنتر فيوتشر|
 
