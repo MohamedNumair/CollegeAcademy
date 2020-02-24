@@ -10,6 +10,7 @@ weight : 8
 | ||
 |---:|----------------------|
 | {{% button href="/Prep/Files/Dynamics_Lecture2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - ديناميكا|
+| {{% button href="/Prep/Files/Dynamics_Motion_in_a_plane.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |الحركة في المستوى - ديناميكا|
 
 ## Sections
 
