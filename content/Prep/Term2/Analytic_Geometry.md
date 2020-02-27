@@ -11,6 +11,7 @@ weight : 8
 |---:|----------------------|
 | {{% button href="/Prep/Files/Analytic_Geometry_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الأولى - هندسة تحليلية|
 | {{% button href="/Prep/Files/Analytic_Geometry_Lecture2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - هندسة تحليلية|
+| {{% button href="/Prep/Files/Analytic_Geometry_Circle.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |الدائرة - هندسة تحليلية|
 
 ## Sections
 
