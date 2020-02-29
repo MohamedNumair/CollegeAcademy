@@ -15,7 +15,7 @@ weight : 8
 
 
 
-## Exercise
+## Solved Examples
 |  | |
 |---:|----------------------|
 | {{% button href="/Prep/Files/Analytic_Geometry_Problems_1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |مسائل نقل ودوران - م.اسراء شوقي|
