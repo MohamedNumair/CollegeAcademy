@@ -9,9 +9,17 @@ weight : 8
 ## Lectures
 | ||
 |---:|----------------------|
-| {{% button href="/Prep/Files/Analytic_Geometry_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الأولى - هندسة تحليلية|
-| {{% button href="/Prep/Files/Analytic_Geometry_Lecture2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - هندسة تحليلية|
-| {{% button href="/Prep/Files/Analytic_Geometry_Circle.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |الدائرة - هندسة تحليلية|
+| {{% button href="/Prep/Files/Analytic_Geometry_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الأولى - م.أدهم أسامة|
+| {{% button href="/Prep/Files/Analytic_Geometry_Lecture2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - م.أدهم أسامة|
+| {{% button href="/Prep/Files/Analytic_Geometry_Circle.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |الدائرة - م.إسراء شوقي|
+
+
+
+## Exercise
+|  | |
+|---:|----------------------|
+| {{% button href="/Prep/Files/Analytic_Geometry_Problems_1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |مسائل نقل ودوران - م.اسراء شوقي|
+| || 
 
 ## Sections
 
