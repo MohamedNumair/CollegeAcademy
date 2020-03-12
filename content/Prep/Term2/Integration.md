@@ -9,14 +9,15 @@ weight : 8
 ## Lectures
 | ||
 |---:|----------------------|
-| {{% button href="/Prep/Files/Integration_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الأولى - تكامل|
-| {{% button href="/Prep/Files/Integration_Lecture2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - تكامل|
+| {{% button href="/Prep/Files/Integration_Lecture1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الأولى - م.أدهم أسامة|
+| {{% button href="/Prep/Files/Integration_Lecture2.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المحاضرة الثانية - م.أدهم أسامة|
 
 
 ## Sections
 
 |  | |
 |---:|----------------------|
+| {{% button href="/Prep/Files/Integration_Section_subparts.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |طرق التكامل - م.إسراء شوقي|
 | || 
 
 ## Sheets with Solutions
