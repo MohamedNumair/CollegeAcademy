@@ -17,7 +17,7 @@ weight : 8
 
 |  | |
 |---:|----------------------|
-| {{% button href="/Prep/Files/Integration_Section_subparts.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |طرق التكامل - م.إسراء شوقي|
+| {{% button href="/Prep/Files/Integration_Section_subparts.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |طرق التكامل (تجزيء، تعويض) - م.إسراء شوقي|
 | || 
 
 ## Sheets with Solutions
