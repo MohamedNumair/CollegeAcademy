@@ -13,7 +13,9 @@ pre = "<i class='fas fa-graduation-cap'></i> "
 
 ### Now Live :
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JfXmJCYm6V8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1000" height="315" src="https://www.youtube.com/embed/JfXmJCYm6V8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/live_chat?v=JfXmJCYm6V8&embed_domain=www.collegetanta.cf" width="480"></iframe><br />
 
 ### Lectures
 
