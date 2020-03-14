@@ -18,7 +18,7 @@ pre = "<i class='fas fa-graduation-cap'></i> "
  style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
  <iframe id="ViostreamIframe"
   width="100%" height="100%"
-src="https://www.youtube.com/embed/JfXmJCYm6V8"
+src="https://www.youtube.com/embed/c-DY26jgP8E"
   frameborder="0" allowfullscreen=""
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
@@ -27,7 +27,7 @@ src="https://www.youtube.com/embed/JfXmJCYm6V8"
  style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
  <iframe id="ChatIframe"
   width="100%" height="100%"
-src="https://www.youtube.com/live_chat?v=JfXmJCYm6V8&embed_domain=www.collegetanta.cf"
+src="https://www.youtube.com/live_chat?v=c-DY26jgP8E&embed_domain=www.collegetanta.cf"
   frameborder="0" allowfullscreen=""
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
