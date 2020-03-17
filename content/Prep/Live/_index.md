@@ -14,6 +14,7 @@ pre = "<i class='fas fa-graduation-cap'></i> "
 ### Now Live :
 
 
+
 <div id="Container"
  style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
  <iframe id="ViostreamIframe"
@@ -33,12 +34,13 @@ src="https://www.youtube.com/live_chat?v=c-DY26jgP8E&embed_domain=www.collegetan
 </div>
 
 
+
 ### Lectures
 
 هنا سيتم عرض المحاضرات التي شرحت لايف 
 
 ## فيزياء مغناطيسية
-# محاضرة قانون أمبير - الجزء الأول
+محاضرة قانون أمبير - الجزء الأول
 
 <div id="Container"
  style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
@@ -49,7 +51,7 @@ src="https://www.youtube.com/embed/GKeFAaFw-Pc"
   style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-# محاضرة قانون أمبير - الجزء الثاني
+محاضرة قانون أمبير - الجزء الثاني
 <div id="Container"
  style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
  <iframe id="ViostreamIframe"
