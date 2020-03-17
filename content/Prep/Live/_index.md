@@ -37,7 +37,27 @@ src="https://www.youtube.com/live_chat?v=c-DY26jgP8E&embed_domain=www.collegetan
 
 هنا سيتم عرض المحاضرات التي شرحت لايف 
 
-*حالياً لم يتم رفع اي محاضرات لايف*
+## فيزياء مغناطيسية
+# محاضرة قانون أمبير - الجزء الأول
+
+<div id="Container"
+ style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+ <iframe id="ViostreamIframe"
+  width="100%" height="100%"
+src="https://www.youtube.com/embed/GKeFAaFw-Pc"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+# محاضرة قانون أمبير - الجزء الثاني
+<div id="Container"
+ style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+ <iframe id="ViostreamIframe"
+  width="100%" height="100%"
+src="https://www.youtube.com/embed/0TXRDl8E7Tk"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### Sections
 
