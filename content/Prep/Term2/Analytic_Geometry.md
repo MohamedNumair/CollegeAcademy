@@ -37,5 +37,8 @@ weight : 8
 
 |  | |
 |---:|----------------------|
+| {{% button href="/Prep/Files/analytic_geometry1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |دوران ونقل المحاور - م.وائل أبو زيد|
+| {{% button href="/Prep/Files/the_circle.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |  الدائرة - م.وائل أبو زيد| 
+| {{% button href="/Prep/Files/double_equation1.pdf" icon="fas fa-download" %}}COLLEGE DOWNLOAD{{% /button %}} |المعادلة المزدوجة - م.وائل أبو زيد|
 
 
