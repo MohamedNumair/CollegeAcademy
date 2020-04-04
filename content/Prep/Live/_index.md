@@ -39,6 +39,56 @@ src="https://www.youtube.com/live_chat?v=f2arCPiAZno&embed_domain=www.collegetan
 
 هنا سيتم عرض المحاضرات التي شرحت لايف 
 
+## هندسة تحليلة
+<div id="Container"
+ style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+ <iframe id="ViostreamIframe"
+  width="100%" height="100%"
+src="https://www.youtube.com/embed/QZRjFByWTJM"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+<div id="Container"
+ style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+ <iframe id="ViostreamIframe"
+  width="100%" height="100%"
+src="https://www.youtube.com/embed/TpVZsFkYTVY"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<div id="Container"
+ style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+ <iframe id="ViostreamIframe"
+  width="100%" height="100%"
+src="https://www.youtube.com/embed/pnKzAiUuUQc"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<div id="Container"
+ style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+ <iframe id="ViostreamIframe"
+  width="100%" height="100%"
+src="https://www.youtube.com/embed/UyvcN3F9Lm4"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<div id="Container"
+ style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+ <iframe id="ViostreamIframe"
+  width="100%" height="100%"
+src="https://www.youtube.com/embed/9iDWFmpVSQo"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<div id="Container"
+ style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+ <iframe id="ViostreamIframe"
+  width="100%" height="100%"
+src="https://www.youtube.com/embed/NOtvBlu20Ao"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:0; left: 0"></iframe>
+</div>
 ## فيزياء مغناطيسية
 محاضرة قانون أمبير - الجزء الأول
 
